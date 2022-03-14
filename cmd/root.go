@@ -70,7 +70,8 @@ func init() {
 	confFile := path.Join(awsDir, awscConfigName)
 	conf, err := config.ParseConfig(confFile)
 	if err != nil {
-		return
+		fmt.Fprintf(os.Stderr, "ParseConfig Err: %v\n", err)
+		os.Exit(1)
 	}
 
 	AwscConf = conf
