@@ -1,0 +1,1128 @@
+Version: "1"
+ApiPrefixFilter:
+    - describe-dhcp
+    - describe-comp
+    - describe-flow
+    - describe-host
+    - describe-i
+    - describe-k
+    - describe-n
+    - describe-network
+    - describe-p
+    - describe-route
+    - describe-secu
+    - describe-sub
+    - describe-tags
+    - describe-v
+    - get-console
+ApiPrefix:
+    allocate:
+        random:
+            - ip-pool
+    blackpearl:
+        health:
+            - api-terminated
+    create:
+        public:
+            - ipv4-pool
+    delete:
+        public:
+            - ipv4-pool
+    deregister:
+        public:
+            - ipv4-pool
+    describe:
+        compute:
+            - hosts
+        dhcp:
+            - options
+        flow:
+            - logs
+        host:
+            - reservation-offerings
+            - reservations
+        hosts:
+            - api-terminated
+        iam:
+            - instance-profile-associations
+        id:
+            - format
+        identity:
+            - id-format
+        image:
+            - attribute
+        images:
+            - api-terminated
+        import:
+            - image-tasks
+            - snapshot-tasks
+        instance:
+            - attribute
+            - credit-specifications
+            - event-notification-attributes
+            - event-windows
+            - placements
+            - status
+            - type-offerings
+            - types
+        instances:
+            - api-terminated
+        internet:
+            - gateways
+        ipv6:
+            - pools
+        key:
+            - pairs
+        nat:
+            - gateways
+        network:
+            - acls
+            - insights-analyses
+            - insights-paths
+            - interface-attribute
+            - interface-permissions
+            - interfaces
+            - interfaces-spc
+        notifications:
+            - api-terminated
+        placement:
+            - groups
+        prefix:
+            - lists
+        principal:
+            - id-format
+        public:
+            - ipv4-pools
+        route:
+            - tables
+        security:
+            - group-references
+            - group-rules
+            - groups
+        subnets:
+            - api-terminated
+        tags:
+            - api-terminated
+        volume:
+            - attribute
+            - status
+        volumes:
+            - api-terminated
+            - modifications
+        vpc:
+            - attribute
+            - classic-link
+            - classic-link-dns-support
+            - endpoint-connection-notifications
+            - endpoint-connections
+            - endpoint-service-configurations
+            - endpoint-service-permissions
+            - endpoint-services
+            - endpoints
+            - peering-connections
+        vpcs:
+            - api-terminated
+        vpn:
+            - connections
+            - gateways
+    disable:
+        public:
+            - ipv4-pool
+    disassociate:
+        public:
+            - ip
+    enable:
+        public:
+            - ipv4-pool
+    get:
+        console:
+            - output
+            - screenshot
+    list:
+        address:
+            - associations
+        blackpearl:
+            - api-terminated
+        network:
+            - acl
+            - interface
+        public:
+            - ips
+            - ipv4-pool
+        route:
+            - table
+        security:
+            - group
+        vrouters:
+            - api-terminated
+    register:
+        public:
+            - ipv4-pool
+    release:
+        ip:
+            - pool
+        public:
+            - ip
+    request:
+        ip:
+            - pool
+    show:
+        dataversion:
+            - api-terminated
+        flowlog:
+            - api-terminated
+        network:
+            - interface
+        papyrus:
+            - flowlog
+            - summary
+        revision:
+            - api-terminated
+        snat:
+            - api-terminated
+        summary:
+            - api-terminated
+        vrevision:
+            - api-terminated
+        vrouter:
+            - flow
+            - flowlog
+            - network-acl
+            - network-interface
+            - port
+            - route
+            - security-group
+            - subnet
+            - summary
+            - table
+    update:
+        network:
+            - interface
+ApiOptions:
+    allocate-random-ip-pool:
+        OutputField: Result
+        Required:
+            - pool-id
+        Args: []
+    blackpearl-health:
+        OutputField: Result
+        Required: []
+        Args: []
+    create-public-ipv4-pool:
+        OutputField: Result
+        Required:
+            - pool-id
+        Args: []
+    delete-public-ipv4-pool:
+        OutputField: Result
+        Required:
+            - pool-id
+        Args: []
+    deregister-public-ipv4-pool:
+        OutputField: Result
+        Required:
+            - pool-id
+            - range-id
+        Args: []
+    describe-compute-hosts:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - compute-host-ids
+            - hostnames
+            - max-results
+            - next-token
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-dhcp-options:
+        OutputField: Output
+        Required: []
+        Args: []
+    describe-flow-logs:
+        OutputField: Output
+        Required: []
+        Args:
+            - filter
+            - flow-log-ids
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-host-reservation-offerings:
+        OutputField: Output
+        Required: []
+        Args:
+            - filter
+            - max-duration
+            - min-duration
+            - offering-id
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-host-reservations:
+        OutputField: Output
+        Required: []
+        Args:
+            - filter
+            - host-reservation-id-set
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-hosts:
+        OutputField: Output
+        Required: []
+        Args:
+            - filter
+            - host-ids
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-iam-instance-profile-associations:
+        OutputField: Output
+        Required: []
+        Args:
+            - association-ids
+            - filters
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-id-format:
+        OutputField: Output
+        Required: []
+        Args:
+            - resource
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-identity-id-format:
+        OutputField: Output
+        Required: []
+        Args:
+            - resource
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-image-attribute:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-images:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - executable-users
+            - filters
+            - image-ids
+            - owners
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-import-image-tasks:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - import-task-ids
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-import-snapshot-tasks:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - import-task-ids
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-instance-attribute:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-instance-credit-specifications:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - instance-ids
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-instance-event-notification-attributes:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-instance-event-windows:
+        OutputField: Output
+        Required: []
+        Args:
+            - instance-event-window-ids
+            - filters
+            - max-results
+            - next-token
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-instance-placements:
+        OutputField: Output
+        Required: []
+        Args:
+            - max-results
+            - next-token
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-instance-status:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - instance-ids
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-instance-type-offerings:
+        OutputField: Output
+        Required: []
+        Args:
+            - location-type
+            - filters
+            - max-results
+            - next-token
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-instance-types:
+        OutputField: Output
+        Required: []
+        Args:
+            - instance-types
+            - filters
+            - max-results
+            - next-token
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-instances:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - instance-ids
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-internet-gateways:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - internet-gateway-ids
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-ipv6-pools:
+        OutputField: Output
+        Required: []
+        Args:
+            - pool-ids
+            - next-token
+            - max-results
+            - filters
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-key-pairs:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - key-names
+            - key-pair-ids
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-nat-gateways:
+        OutputField: Output
+        Required: []
+        Args:
+            - filter
+            - nat-gateway-ids
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-network-acls:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - network-acl-ids
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-network-insights-analyses:
+        OutputField: Output
+        Required: []
+        Args:
+            - network-insights-analysis-ids
+            - network-insights-path-id
+            - analysis-start-time
+            - analysis-end-time
+            - filters
+            - max-results
+            - next-token
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-network-insights-paths:
+        OutputField: Output
+        Required: []
+        Args:
+            - network-insights-path-ids
+            - filters
+            - max-results
+            - next-token
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-network-interface-attribute:
+        OutputField: Output
+        Required: []
+        Args:
+            - attribute
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-network-interface-permissions:
+        OutputField: Output
+        Required: []
+        Args:
+            - network-interface-permission-ids
+            - filters
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-network-interfaces:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - network-interface-ids
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-network-interfaces-spc:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - network-interface-ids
+            - next-token
+            - max-results
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-notifications:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - type
+            - severity
+            - state
+            - notification-ids
+            - max-results
+            - next-token
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-placement-groups:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - group-names
+            - group-ids
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-prefix-lists:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - prefix-list-ids
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-principal-id-format:
+        OutputField: Output
+        Required: []
+        Args:
+            - resources
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-public-ipv4-pools:
+        OutputField: Output
+        Required: []
+        Args:
+            - pool-ids
+            - filters
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-route-tables:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - route-table-ids
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-security-group-references:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-security-group-rules:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - security-group-rule-ids
+            - next-token
+            - max-results
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-security-groups:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - group-ids
+            - group-names
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-subnets:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - subnet-ids
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-tags:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-volume-attribute:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-volume-status:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - volume-ids
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-volumes:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - volume-ids
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-volumes-modifications:
+        OutputField: Output
+        Required: []
+        Args:
+            - volume-ids
+            - filters
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-vpc-attribute:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-vpc-classic-link:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - vpc-ids
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-vpc-classic-link-dns-support:
+        OutputField: Output
+        Required: []
+        Args:
+            - vpc-ids
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-vpc-endpoint-connection-notifications:
+        OutputField: Output
+        Required: []
+        Args:
+            - connection-notification-id
+            - filters
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-vpc-endpoint-connections:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-vpc-endpoint-service-configurations:
+        OutputField: Output
+        Required: []
+        Args:
+            - service-ids
+            - filters
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-vpc-endpoint-service-permissions:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-vpc-endpoint-services:
+        OutputField: Output
+        Required: []
+        Args:
+            - service-names
+            - filters
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-vpc-endpoints:
+        OutputField: Output
+        Required: []
+        Args:
+            - vpc-endpoint-ids
+            - filters
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-vpc-peering-connections:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - vpc-peering-connection-ids
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-vpcs:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - vpc-ids
+            - cli-input-json
+            - starting-token
+            - page-size
+            - max-items
+            - generate-cli-skeleton
+    describe-vpn-connections:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - vpn-connection-ids
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-vpn-gateways:
+        OutputField: Output
+        Required: []
+        Args:
+            - filters
+            - vpn-gateway-ids
+            - cli-input-json
+            - generate-cli-skeleton
+    disable-public-ipv4-pool:
+        OutputField: Result
+        Required:
+            - pool-id
+            - range-id
+        Args: []
+    disassociate-public-ip:
+        OutputField: Result
+        Required:
+            - association-id
+        Args: []
+    enable-public-ipv4-pool:
+        OutputField: Result
+        Required:
+            - pool-id
+            - range-id
+        Args: []
+    get-console-output:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - generate-cli-skeleton
+    get-console-screenshot:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - generate-cli-skeleton
+    list-address-associations:
+        OutputField: Result
+        Required: []
+        Args: []
+    list-blackpearl:
+        OutputField: Result
+        Required: []
+        Args:
+            - format
+            - host-ip
+            - instance-id
+            - network-interface-id
+    list-network-acl:
+        OutputField: Result
+        Required: []
+        Args:
+            - format
+            - network-acl-id
+            - vpc-id
+    list-network-interface:
+        OutputField: Result
+        Required: []
+        Args:
+            - connector
+            - format
+            - host-ip
+            - instance-id
+            - mac-address
+            - nat-ip
+            - network-interface-id
+            - owner-id
+            - private-ip-address
+            - state
+            - status
+            - subnet-id
+            - underlay-ip
+            - underlay-port
+            - vpc-id
+    list-public-ips:
+        OutputField: Result
+        Required: []
+        Args: []
+    list-public-ipv4-pool:
+        OutputField: Result
+        Required: []
+        Args: []
+    list-route-table:
+        OutputField: Result
+        Required: []
+        Args:
+            - format
+            - route-table-id
+            - vpc-id
+    list-security-group:
+        OutputField: Result
+        Required: []
+        Args:
+            - format
+            - group-id
+            - vpc-id
+    list-vrouters:
+        OutputField: Result
+        Required: []
+        Args:
+            - blackpearl-ip
+            - format
+            - host-ip
+            - instance-id
+            - network-interface-id
+    register-public-ipv4-pool:
+        OutputField: Result
+        Required:
+            - first-address
+            - last-address
+            - pool-id
+            - range-id
+        Args: []
+    release-ip-pool:
+        OutputField: Result
+        Required:
+            - pool-id
+            - public-ip
+        Args: []
+    release-public-ip:
+        OutputField: Result
+        Required:
+            - public-ip
+        Args:
+            - allocation-id
+    request-ip-pool:
+        OutputField: Result
+        Required:
+            - pool-id
+            - public-ip
+        Args: []
+    show-dataversion:
+        OutputField: Result
+        Required: []
+        Args:
+            - filter-id
+            - filter
+            - format
+            - host-ip
+    show-flowlog:
+        OutputField: Result
+        Required: []
+        Args:
+            - filter-id
+            - filter
+            - format
+    show-network-interface:
+        OutputField: Result
+        Required: []
+        Args:
+            - filter-id
+            - filter
+            - format
+            - host-ip
+            - instance-id
+            - network-interface-id
+    show-papyrus-flowlog:
+        OutputField: Result
+        Required: []
+        Args:
+            - filter-id
+            - filter
+            - format
+            - host-ip
+            - instance-id
+            - network-interface-id
+    show-papyrus-summary:
+        OutputField: Result
+        Required: []
+        Args:
+            - format
+            - host-ip
+            - instance-id
+            - network-interface-id
+    show-revision:
+        OutputField: Result
+        Required: []
+        Args:
+            - filter-id
+            - filter
+            - format
+    show-snat:
+        OutputField: Result
+        Required: []
+        Args: []
+    show-summary:
+        OutputField: Result
+        Required: []
+        Args:
+            - format
+    show-vrevision:
+        OutputField: Result
+        Required: []
+        Args:
+            - filter-id
+            - filter
+            - format
+            - host-ip
+    show-vrouter-flow:
+        OutputField: Result
+        Required: []
+        Args:
+            - detail
+            - filter-id
+            - filter
+            - format
+            - host-ip
+            - instance-id
+            - network-interface-id
+            - page
+    show-vrouter-flowlog:
+        OutputField: Result
+        Required: []
+        Args:
+            - filter-id
+            - filter
+            - format
+            - host-ip
+            - instance-id
+            - network-interface-id
+    show-vrouter-network-acl:
+        OutputField: Result
+        Required: []
+        Args:
+            - filter-id
+            - filter
+            - format
+            - host-ip
+            - instance-id
+            - network-interface-id
+    show-vrouter-network-interface:
+        OutputField: Result
+        Required: []
+        Args:
+            - filter-id
+            - filter
+            - format
+            - host-ip
+            - instance-id
+            - network-interface-id
+    show-vrouter-port:
+        OutputField: Result
+        Required: []
+        Args:
+            - format
+            - host-ip
+            - instance-id
+            - network-interface-id
+            - port-name
+    show-vrouter-route:
+        OutputField: Result
+        Required: []
+        Args:
+            - filter-id
+            - filter
+            - format
+            - host-ip
+            - instance-id
+            - network-interface-id
+    show-vrouter-security-group:
+        OutputField: Result
+        Required: []
+        Args:
+            - detail
+            - filter-id
+            - filter
+            - format
+            - host-ip
+            - instance-id
+            - network-interface-id
+    show-vrouter-subnet:
+        OutputField: Result
+        Required: []
+        Args:
+            - filter-id
+            - filter
+            - format
+            - host-ip
+            - instance-id
+            - network-interface-id
+    show-vrouter-summary:
+        OutputField: Result
+        Required: []
+        Args:
+            - format
+            - host-ip
+            - instance-id
+            - network-interface-id
+    show-vrouter-table:
+        OutputField: Result
+        Required: []
+        Args:
+            - format
+            - host-ip
+            - instance-id
+            - network-interface-id
+            - table-id
+    update-network-interface:
+        OutputField: Result
+        Required:
+            - network-interface-id
+        Args:
+            - connector
+            - fqdn
+            - host-ip
+            - nat-ip
+            - status
+            - underlay-ip
