@@ -8,11 +8,12 @@ aws-completion is a wrapper allowing shell completion by [TAB]
 copy `bin/$(OS)/awsc` to `$HOME/bin/`  
 copy `config/awsc.yaml` to `$HOME/.aws/`  
 
-if you want to add more aws commands under completion, add commands in `ApiPrefixFilter` section  
-the list item starts the prefix of aws command 
+If you want to add more aws commands under completion, add commands in `ApiPrefixFilter` section.  
+And run below:   
 
 `$ awsc generate-sub-cmds --profile <your_profile>`
 
+Item starts the prefix of aws command  
 ## Default Prefix Filters 
 ```
 ApiPrefixFilter:
