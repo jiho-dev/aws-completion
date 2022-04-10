@@ -145,15 +145,20 @@ func ShowEc2Cmd() string {
 	return ""
 }
 
+func ShowEc2AdminVpc() {
+	fmt.Printf("Admin-Vpc subcommands: \n")
+
+	for api, _ := range AdminVpcCmds {
+		fmt.Printf("  %s\n", api)
+	}
+}
+
 func ShowApiMain(cobraCmd *cobra.Command, args []string) {
 	switch cobraCmd.Use {
-	case "show-ec2-api":
+	case CMD_SHOW_EC2_CMDS:
 		ShowEc2Cmd()
 
-	case "show-admin-vpc-api":
-		fmt.Printf("Admin-Vpc subcommands: \n")
-		for api, _ := range AdminVpcCmds {
-			fmt.Printf("  %s\n", api)
-		}
+	case CMD_SHOW_ADMIN_VPC_CMDS:
+		ShowEc2AdminVpc()
 	}
 }

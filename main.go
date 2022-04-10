@@ -2,12 +2,16 @@ package main
 
 import (
 	"github.com/jiho-dev/aws-completion/cmd"
-	//"github.com/jiho-dev/aws-completion/config"
+	"github.com/jiho-dev/aws-completion/config"
 )
 
 func main() {
-	_ = cmd.Execute()
+	if true {
+		_ = cmd.Execute()
+		//cmd.ShowEc2Cmd()
+	} else {
+		// for test
+		config.YamlTest()
+	}
 
-	//config.YamlTest()
-	//cmd.ShowEc2Cmd()
 }

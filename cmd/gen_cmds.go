@@ -7,7 +7,6 @@ import (
 	"strings"
 
 	"github.com/jiho-dev/aws-completion/config"
-	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
 )
 
@@ -53,23 +52,6 @@ var AdminVpcCmds = map[string]bool{
 	"show-vrouter-summary":           true,
 	"show-vrouter-table":             true,
 	"update-network-interface":       true,
-}
-
-func InitGenerateCmd() *cobra.Command {
-	var genCmd = &cobra.Command{
-		Use:   CMD_GENERATE_SUB_CMDS,
-		Short: "Generate sub-commands",
-		//Hidden:                true,
-		//DisableFlagsInUseLine: true,
-		//ValidArgs: []string{"bash", "zsh", "fish", "powershell"},
-		//Args: cobra.ExactValidArgs(1),
-		Run:               generateApiMain,
-		ValidArgsFunction: getApiArgs,
-	}
-
-	addProfileCmd(genCmd)
-
-	return genCmd
 }
 
 func Contains(s []string, searchterm string) bool {
@@ -134,9 +116,9 @@ func GetEc2Apis(prefixFilters []string) []string {
 
 ////////////////////////////
 
-func generateApiMain(cobraCmd *cobra.Command, args []string) {
-	prefixFilter := AwscConf.ApiPrefixFilter
-	allApis := GetEc2Apis(prefixFilter)
+func GenerateApiMain(flags *flag.FlagSet) {
+	apiFilter := AwscConf.ApiFilter
+	allApis := GetEc2Apis(apiFilter)
 
 	// append AdminVpc APIs
 	for k, _ := range AdminVpcCmds {
@@ -145,55 +127,14 @@ func generateApiMain(cobraCmd *cobra.Command, args []string) {
 
 	sort.Strings(allApis)
 
-	AwscConf.ApiPrefix = generateApiPrefix(allApis)
-
 	apiOptions := map[string]config.ApiOption{}
-	flags := cobraCmd.Flags()
+
 	generateApiParameters(apiOptions, allApis, flags)
 
 	AwscConf.ApiOptions = apiOptions
 
 	confFile := path.Join(awsDir, awscConfigName)
 	config.WriteConfig(AwscConf, confFile)
-}
-
-func generateApiPrefix(allApis []string) map[string]map[string][]string {
-	apiPrefix := map[string]map[string][]string{}
-
-	for _, cmd := range allApis {
-		//fmt.Printf("Ec2Cmd: %s \n", cmd)
-
-		c := strings.Split(cmd, "-")
-		first := c[0]
-		firstMap, ok := apiPrefix[first]
-		if !ok {
-			firstMap = map[string][]string{}
-			apiPrefix[first] = firstMap
-		}
-
-		if len(c) < 2 {
-			firstMap[config.API_TERMINATED] = nil
-			continue
-		}
-
-		second := c[1]
-		rest := strings.Join(c[2:], "-")
-
-		secondList, ok1 := firstMap[second]
-		if !ok1 {
-			secondList = []string{}
-		}
-
-		if len(rest) < 1 {
-			rest = config.API_TERMINATED
-		}
-
-		secondList = append(secondList, rest)
-
-		firstMap[second] = secondList
-	}
-
-	return apiPrefix
 }
 
 func generateApiParameters(apiOptions map[string]config.ApiOption, allApis []string, flags *flag.FlagSet) {
@@ -211,6 +152,16 @@ func generateApiParameters(apiOptions map[string]config.ApiOption, allApis []str
 		if opt != nil {
 			apiOptions[api] = *opt
 		}
+	}
+
+	apiOptions[CMD_GENERATE_EC2_CMDS] = config.ApiOption{
+		OutputField: "Result",
+	}
+	apiOptions[CMD_SHOW_EC2_CMDS] = config.ApiOption{
+		OutputField: "Result",
+	}
+	apiOptions[CMD_SHOW_ADMIN_VPC_CMDS] = config.ApiOption{
+		OutputField: "Result",
 	}
 }
 

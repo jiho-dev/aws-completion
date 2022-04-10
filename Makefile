@@ -1,6 +1,8 @@
 all:
-	go build -o awsc
-	/bin/cp ./awsc ~/bin
+#	go build -o awsc
+#	/bin/cp ./awsc ~/bin
+
+	go build -o ac
 
 
 zsh:
