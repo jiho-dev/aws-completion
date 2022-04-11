@@ -2,7 +2,8 @@ all:
 #	go build -o awsc
 #	/bin/cp ./awsc ~/bin
 
-	go build -o ac
+	go build -o awscomp
+	/bin/cp ./awscomp ~/bin
 
 
 zsh:

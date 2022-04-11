@@ -24,10 +24,7 @@ type ApiOption struct {
 type AwscConfig struct {
 	Version   string   `yaml:"Version"`
 	ApiFilter []string `yaml:"ApiFilter"`
-	// 1st key: first api, 2nd key: second api, data: rest part of full api
-	//ApiPrefix map[string]map[string][]string `yaml:"ApiPrefix"`
 	// key: full-api, value: api-option
-
 	ApiOptions map[string]ApiOption `yaml:"ApiOptions"`
 }
 

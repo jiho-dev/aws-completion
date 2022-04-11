@@ -144,7 +144,7 @@ func generateApiParameters(apiOptions map[string]config.ApiOption, allApis []str
 		var opt *config.ApiOption
 
 		if _, ok := AdminVpcCmds[api]; ok {
-			opt = generateAdminVpcParameters(api, flags)
+			//opt = generateAdminVpcParameters(api, flags)
 		} else {
 			opt = generateEc2ApiParameters(api)
 		}
@@ -199,24 +199,33 @@ func generateEc2ApiParameters(api string) *config.ApiOption {
 		}
 
 		arg = strings.TrimSpace(arg)
-
-		if strings.Contains(arg, "--dry-run") {
-			continue
-		} else if !strings.Contains(arg, "[--") {
-			continue
-		} else if !strings.Contains(arg, "<value>") {
-			// XXX
+		if !strings.Contains(arg, "--") {
 			continue
 		}
 
 		if seeSyn {
-			tmp := strings.Split(arg, " ")
-			key := tmp[0][3:]
+			// start with --
+			required := strings.HasPrefix(arg, "--")
+			arg = strings.ReplaceAll(arg, "[", "")
+			arg = strings.ReplaceAll(arg, "]", "")
+			words := strings.Split(arg, " ")
 
-			if !Contains(newOpts.Required, key) {
-				newOpts.Args = append(newOpts.Args, key)
+			for _, opt := range words {
+				if !strings.HasPrefix(opt, "--") {
+					continue
+				}
+
+				opt = strings.TrimLeft(opt, "--")
+				if required {
+					newOpts.Required = append(newOpts.Required, opt)
+				} else {
+					newOpts.Args = append(newOpts.Args, opt)
+				}
 			}
 		}
+
+		sort.Strings(newOpts.Required)
+		sort.Strings(newOpts.Args)
 	}
 
 	return &newOpts
