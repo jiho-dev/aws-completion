@@ -17,7 +17,8 @@ var awscConfigName = EXEC_NAME + ".yaml"
 var AwscConf *config.AwscConfig
 
 func init() {
-	syslogger, err := syslog.New(syslog.LOG_INFO, EXEC_NAME)
+	//syslogger, err := syslog.New(syslog.LOG_INFO, EXEC_NAME)
+	syslogger, err := syslog.New(syslog.LOG_WARNING, EXEC_NAME)
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -56,7 +57,7 @@ func getFullCommandName() (string, int) {
 func Execute() error {
 
 	log.Printf("")
-	log.Printf("Start ...")
+	log.Printf("Start %s", EXEC_NAME)
 
 	if complete() {
 		return nil
@@ -68,7 +69,7 @@ func Execute() error {
 		options = os.Args[optIndex:]
 	}
 
-	log.Printf("fullCmd:%s, optIndex: %d, options: %v", fullCmd, optIndex, options)
+	//log.Printf("fullCmd:%s, optIndex: %d, options: %v", fullCmd, optIndex, options)
 
 	switch fullCmd {
 	case CMD_GENERATE_EC2_CMDS:

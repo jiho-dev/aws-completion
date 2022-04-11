@@ -27,3 +27,11 @@ add the line in .bashrc
 or 
 
 `make zsh`  
+
+copy awscomp.zsh in `~/.oh-my-zsh/functions/_awscomp`  
+
+add it in .zshrc   
+
+`eval "$(cat /Users/jiho.jung/.oh-my-zsh/functions/_awscomp)"`   
+
+

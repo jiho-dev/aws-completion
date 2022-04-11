@@ -3,7 +3,7 @@ all:
 #	/bin/cp ./awsc ~/bin
 
 	go build -o awscomp
-	/bin/cp ./awscomp ~/bin
+	/bin/mv ./awscomp ~/bin
 
 
 zsh:

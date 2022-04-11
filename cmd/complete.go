@@ -107,7 +107,7 @@ func (ci *CompInfo) GetSubCommand() ([]string, *config.ApiOption) {
 	fullCmd := ci.GetFullCmd()
 	c := strings.Count(fullCmd, "-")
 
-	log.Printf("fullCmd: %s, dashcnt: %d", fullCmd, c)
+	//log.Printf("fullCmd: %s, dashcnt: %d", fullCmd, c)
 
 	var matchedOpt *config.ApiOption
 
@@ -127,8 +127,6 @@ func (ci *CompInfo) GetSubCommand() ([]string, *config.ApiOption) {
 
 	// find more command
 	for key, _ := range conf.ApiOptions {
-		log.Printf("apiopt key:%s ", key)
-
 		if fullCmd == key {
 			// exact matched
 			continue
