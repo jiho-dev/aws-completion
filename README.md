@@ -18,7 +18,7 @@ And run below:
 $ awscomp [TAB][TAB]
 
 ## bash  
-add the line in .bashrc
+add the line in .bashrc  
 `complete -C ~/bin/awscomp awscomp`
 
 ## zsh
