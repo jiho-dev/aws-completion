@@ -7,13 +7,14 @@ import (
 
 	"github.com/TylerBrock/colorjson"
 	"github.com/fatih/color"
+	"github.com/jiho-dev/aws-completion/config"
 	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
 	"github.com/tidwall/gjson"
 )
 
 func RunCmd(inCmds []string, apiArgs []string, adminVpc bool, flags *flag.FlagSet) (string, error) {
-	profile, err := flags.GetString(CMD_PROFILE)
+	profile, err := flags.GetString(config.CMD_PROFILE)
 	if err != nil {
 		return "", err
 	}
@@ -28,18 +29,18 @@ func RunCmd(inCmds []string, apiArgs []string, adminVpc bool, flags *flag.FlagSe
 
 	if adminVpc {
 		cmdOpt = append(cmdOpt, "admin-vpc")
-		if cmd == CMD_SHOW_HELP {
+		if cmd == config.CMD_SHOW_HELP {
 			cmd = "--h"
 		} else {
 			cmdOpt = append(cmdOpt, "--admin-action")
 		}
-	} else if cmd == CMD_SHOW_HELP {
+	} else if cmd == config.CMD_SHOW_HELP {
 		return ShowEc2Cmd(), nil
 	}
 
 	cmdOpt = append(cmdOpt, cmd)
 
-	subShowHelp, _ := flags.GetBool(CMD_SHOW_HELP)
+	subShowHelp, _ := flags.GetBool(config.CMD_SHOW_HELP)
 	if subShowHelp {
 		cmdOpt = append(cmdOpt, "--h")
 	} else {
@@ -155,10 +156,10 @@ func ShowEc2AdminVpc() {
 
 func ShowApiMain(cobraCmd *cobra.Command, args []string) {
 	switch cobraCmd.Use {
-	case CMD_SHOW_EC2_CMDS:
+	case config.CMD_SHOW_EC2_CMDS:
 		ShowEc2Cmd()
 
-	case CMD_SHOW_ADMIN_VPC_CMDS:
+	case config.CMD_SHOW_ADMIN_VPC_CMDS:
 		ShowEc2AdminVpc()
 	}
 }

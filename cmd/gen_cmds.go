@@ -138,7 +138,7 @@ func GenerateApiMain(flags *flag.FlagSet) {
 }
 
 func generateApiParameters(apiOptions map[string]config.ApiOption, allApis []string, flags *flag.FlagSet) {
-	flags.Bool(CMD_SHOW_HELP, true, "")
+	flags.Bool(config.CMD_SHOW_HELP, true, "")
 
 	for _, api := range allApis {
 		var opt *config.ApiOption
@@ -154,13 +154,13 @@ func generateApiParameters(apiOptions map[string]config.ApiOption, allApis []str
 		}
 	}
 
-	apiOptions[CMD_GENERATE_EC2_CMDS] = config.ApiOption{
+	apiOptions[config.CMD_GENERATE_EC2_CMDS] = config.ApiOption{
 		OutputField: "Result",
 	}
-	apiOptions[CMD_SHOW_EC2_CMDS] = config.ApiOption{
+	apiOptions[config.CMD_SHOW_EC2_CMDS] = config.ApiOption{
 		OutputField: "Result",
 	}
-	apiOptions[CMD_SHOW_ADMIN_VPC_CMDS] = config.ApiOption{
+	apiOptions[config.CMD_SHOW_ADMIN_VPC_CMDS] = config.ApiOption{
 		OutputField: "Result",
 	}
 }

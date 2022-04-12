@@ -21,7 +21,7 @@ type CompInfo struct {
 }
 
 func (ci *CompInfo) LogPrint() {
-	log.Printf("CompInfo: args: %v, Pos:%d, Inword: %v, Prefix: %s  \n",
+	logger.Debugf("CompInfo: args: %v, Pos:%d, Inword: %v, Prefix: %s  \n",
 		ci.Args, ci.Pos, ci.Inword, ci.Prefix)
 }
 
@@ -31,9 +31,9 @@ func (ci *CompInfo) ShowParam() {
 	for _, name := range names {
 		v, ok := os.LookupEnv(name)
 		if ok {
-			log.Printf("env %s: %s", name, v)
+			logger.Errorf("env %s: %s", name, v)
 		} else {
-			log.Printf("no env %s", name)
+			logger.Errorf("no env %s", name)
 		}
 	}
 }
@@ -67,7 +67,7 @@ func (ci *CompInfo) ArgsHasOptions() bool {
 func (ci *CompInfo) ParseArgs() error {
 	args, inword, err := compgen.Args()
 	if err != nil {
-		log.Printf("ERR: %v ", err)
+		logger.Errorf("ERR: %v ", err)
 
 		return err
 	}
@@ -107,14 +107,14 @@ func (ci *CompInfo) GetSubCommand() ([]string, *config.ApiOption) {
 	fullCmd := ci.GetFullCmd()
 	c := strings.Count(fullCmd, "-")
 
-	//log.Printf("fullCmd: %s, dashcnt: %d", fullCmd, c)
+	logger.Debugf("fullCmd: %s, dashcnt: %d", fullCmd, c)
 
 	var matchedOpt *config.ApiOption
 
 	// find the exact command
 	opt, ok := conf.ApiOptions[fullCmd]
 	if ok {
-		//log.Printf("Exact Matched cmd: %+v", opt)
+		logger.Debugf("Exact Matched cmd: %+v", opt)
 		matchedOpt = &opt
 	}
 
@@ -177,11 +177,9 @@ func complete() bool {
 		cmds = append(cmds, subcmds...)
 	}
 
-	/*
-		log.Printf("subcmd list: %v", subcmds)
-		log.Printf("Matched Opt: %+v", opt)
-		log.Printf("lastCmd: %d, %s", lastIdx, lastCmd)
-	*/
+	logger.Debugf("subcmd list: %v", subcmds)
+	logger.Debugf("Matched Opt: %+v", opt)
+	logger.Debugf("lastCmd: %d, %s", lastIdx, lastCmd)
 
 	if opt != nil {
 		fs := flag.NewFlagSet(lastCmd, flag.ContinueOnError)
@@ -193,20 +191,20 @@ func complete() bool {
 			fs.String(c, c, "")
 		}
 
-		fs.String(CMD_PROFILE, "", "AWS Profile")
+		fs.String(config.CMD_PROFILE, "", "AWS Profile")
 		fs.SetOutput(ioutil.Discard)
 
 		t := compgen.NewTerminator(fs)
 		// register the callback
-		t.Flag(CMD_PROFILE, CompgenProfile)
+		t.Flag(config.CMD_PROFILE, CompgenProfile)
 		//t.Arg(1, CompgenSubCmd)
 
 		args := ci.Args[lastIdx:]
 		inword := ci.Inword
 		lastArg := args[len(args)-1]
 
-		//log.Printf("LastArg: %s", lastArg)
-		//log.Printf("Terminator Org Args: %v", args)
+		logger.Debugf("LastArg: %s", lastArg)
+		logger.Debugf("Terminator Org Args: %v", args)
 
 		// add dash to automatically show options
 		if !ci.Inword && len(ci.Prefix) == 0 && !strings.HasPrefix(lastArg, "-") {
@@ -223,7 +221,7 @@ func complete() bool {
 		cmds = append(cmds, pred...)
 	}
 
-	//log.Printf("final cmd: %v", cmds)
+	logger.Debugf("final cmd: %v", cmds)
 
 	// completion output
 	for _, c := range cmds {
