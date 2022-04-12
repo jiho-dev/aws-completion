@@ -4,67 +4,18 @@ import (
 	"fmt"
 	"os"
 	"path"
+	"strings"
 
 	"github.com/jiho-dev/aws-completion/config"
-	"github.com/spf13/cobra"
+	"github.com/jiho-dev/aws-completion/log"
+	"github.com/sirupsen/logrus"
+	flag "github.com/spf13/pflag"
 )
 
 var awsDir = os.Getenv("HOME") + "/.aws/"
-var awscConfigName = "awsc.yaml"
+var awscConfigName = config.EXEC_NAME + ".yaml"
 var AwscConf *config.AwscConfig
-
-var CompOpt = cobra.CompletionOptions{
-	DisableDefaultCmd:   true,
-	DisableNoDescFlag:   true,
-	HiddenDefaultCmd:    true,
-	DisableDescriptions: true,
-}
-
-/////////////////////////////////
-
-var rootCmd = &cobra.Command{
-	Use:               "awsc",
-	Short:             "awsc <api> <sub-api> [flags]",
-	Long:              "aws-completion to support shell completion of AWS APIs",
-	CompletionOptions: CompOpt,
-}
-
-var CompletionCmd = &cobra.Command{
-	Use:                   "completion [bash|zsh|fish|powershell]",
-	Short:                 "Generate completion script",
-	Long:                  "To load completions",
-	Hidden:                true,
-	DisableFlagsInUseLine: true,
-	ValidArgs:             []string{"bash", "zsh", "fish", "powershell"},
-	Args:                  cobra.ExactValidArgs(1),
-
-	Run: func(cmd *cobra.Command, args []string) {
-		switch args[0] {
-		case "bash":
-			cmd.Root().GenBashCompletionV2(os.Stdout, false)
-		case "zsh":
-			cmd.Root().GenZshCompletionNoDesc(os.Stdout)
-		case "fish":
-			cmd.Root().GenFishCompletion(os.Stdout, false)
-		case "powershell":
-			cmd.Root().GenPowerShellCompletion(os.Stdout)
-		}
-	},
-}
-
-var showEc2ApiCmd = &cobra.Command{
-	Use:               "show-ec2-api",
-	Short:             "show ec2 api",
-	Run:               ShowApiMain,
-	ValidArgsFunction: getApiArgs,
-}
-
-var showAdminVpcApiCmd = &cobra.Command{
-	Use:               "show-admin-vpc-api",
-	Short:             "show admin-vpc api",
-	Run:               ShowApiMain,
-	ValidArgsFunction: getApiArgs,
-}
+var logger *logrus.Logger
 
 func init() {
 	confFile := path.Join(awsDir, awscConfigName)
@@ -75,26 +26,85 @@ func init() {
 	}
 
 	AwscConf = conf
+}
 
-	for api, subApi := range conf.ApiPrefix {
-		subCmd := InitApiCmd(api, subApi)
-		rootCmd.AddCommand(subCmd)
+func getFullCommandName() (string, int) {
+	var fullCmd string
+
+	for i := 1; i < len(os.Args); i++ {
+		if strings.HasPrefix(os.Args[i], "-") {
+			return fullCmd, i - 1
+		}
+
+		if len(fullCmd) > 0 {
+			fullCmd += "-"
+		}
+
+		fullCmd += os.Args[i]
 	}
 
-	rootCmd.AddCommand(CompletionCmd)
-
-	genCmd := InitGenerateCmd()
-	rootCmd.AddCommand(genCmd)
-	rootCmd.AddCommand(showEc2ApiCmd)
-	rootCmd.AddCommand(showAdminVpcApiCmd)
+	return fullCmd, -1
 }
 
 // Execute executes cmd
 func Execute() error {
-	return rootCmd.Execute()
-}
+	//log.InitLogger(logrus.DebugLevel)
+	log.InitLogger(logrus.WarnLevel)
+	logger = log.GetLogger()
 
-func Help(cmd *cobra.Command, s []string) {
-	fmt.Printf("%s: aws completion \n\n", cmd.Use)
-	fmt.Printf("Usage: %s <api> <sub-api> [flags] \n", cmd.Use)
+	logger.Infof("Start %s", config.EXEC_NAME)
+
+	if complete() {
+		return nil
+	}
+
+	var options []string
+	fullCmd, optIndex := getFullCommandName()
+	if optIndex > 0 {
+		options = os.Args[optIndex:]
+	}
+
+	logger.Debugf("fullCmd:%s, optIndex: %d, options: %v", fullCmd, optIndex, options)
+
+	switch fullCmd {
+	case config.CMD_GENERATE_EC2_CMDS:
+		flag := flag.NewFlagSet(config.EXEC_NAME, flag.ExitOnError)
+		flag.String(config.CMD_PROFILE, "", "AWS Profile")
+
+		if optIndex > 1 {
+			flag.Parse(options)
+		}
+
+		profile, err := flag.GetString(config.CMD_PROFILE)
+		if err != nil {
+			fmt.Printf("Profile error: %v\n", err)
+			return nil
+		} else if len(profile) < 1 {
+			fmt.Printf("%s %s: Need admin profile \n", config.EXEC_NAME, config.CMD_GENERATE_EC2_CMDS)
+			return nil
+		}
+
+		GenerateApiMain(flag)
+		return nil
+
+	case config.CMD_SHOW_EC2_CMDS:
+		ShowEc2Cmd()
+		return nil
+
+	case config.CMD_SHOW_ADMIN_VPC_CMDS:
+		ShowEc2AdminVpc()
+		return nil
+
+	case config.CMD_COMPLETION_ZSH:
+		generateZshCompletion(false)
+		os.Exit(0)
+	}
+
+	if optIndex == -1 {
+		fmt.Printf("Unknown command: %s\n", os.Args)
+		return nil
+	}
+
+	apiMainExt(fullCmd, os.Args[optIndex:])
+	return nil
 }

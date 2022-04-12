@@ -37,3 +37,16 @@ func listProfiles() []string {
 
 	return profiles
 }
+
+func CompgenProfile(prefix string) []string {
+	p := listProfiles()
+	var profiles []string
+
+	for _, profile := range p {
+		if strings.HasPrefix(profile, prefix) {
+			profiles = append(profiles, profile)
+		}
+	}
+
+	return profiles
+}

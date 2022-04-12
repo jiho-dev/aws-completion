@@ -1,0 +1,5819 @@
+Version: "1"
+ApiFilter: []
+ApiOptions:
+    accept-reserved-instances-exchange-quote:
+        OutputField: Output
+        Required:
+            - reserved-instance-ids
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - target-configurations
+    accept-transit-gateway-multicast-domain-associations:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - subnet-ids
+            - transit-gateway-attachment-id
+            - transit-gateway-multicast-domain-id
+    accept-transit-gateway-peering-attachment:
+        OutputField: Output
+        Required:
+            - transit-gateway-attachment-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    accept-transit-gateway-vpc-attachment:
+        OutputField: Output
+        Required:
+            - transit-gateway-attachment-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    accept-vpc-endpoint-connections:
+        OutputField: Output
+        Required:
+            - service-id
+            - vpc-endpoint-ids
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    accept-vpc-peering-connection:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - vpc-peering-connection-id
+    admin-vpc:
+        OutputField: Output
+        Required: []
+        Args:
+            - admin-action
+            - cli-input-json
+            - generate-cli-skeleton
+            - h
+            - no-h
+            - parameters
+    advertise-byoip-cidr:
+        OutputField: Output
+        Required:
+            - cidr
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    allocate-address:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - address
+            - cli-input-json
+            - customer-owned-ipv4-pool
+            - domain
+            - dry-run
+            - generate-cli-skeleton
+            - network-border-group
+            - no-dry-run
+            - public-ipv4-pool
+            - tag-specifications
+    allocate-hosts:
+        OutputField: Output
+        Required:
+            - availability-zone
+            - quantity
+        Args:
+            - account-id
+            - auto-placement
+            - cli-input-json
+            - client-token
+            - generate-cli-skeleton
+            - host-recovery
+            - instance-family
+            - instance-type
+            - tag-specifications
+    apply-security-groups-to-client-vpn-target-network:
+        OutputField: Output
+        Required:
+            - client-vpn-endpoint-id
+            - security-group-ids
+            - vpc-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    assign-ipv6-addresses:
+        OutputField: Output
+        Required:
+            - network-interface-id
+        Args:
+            - cli-input-json
+            - generate-cli-skeleton
+            - ipv6-address-count
+            - ipv6-addresses
+            - ipv6-prefix-count
+            - ipv6-prefixes
+    assign-private-ip-addresses:
+        OutputField: Output
+        Required:
+            - network-interface-id
+        Args:
+            - account-id
+            - allow-reassignment
+            - cli-input-json
+            - generate-cli-skeleton
+            - ipv4-prefix-count
+            - ipv4-prefixes
+            - no-allow-reassignment
+            - private-ip-addresses
+            - secondary-private-ip-address-count
+    associate-address:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - allocation-id
+            - allow-reassociation
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - instance-id
+            - network-interface-id
+            - no-allow-reassociation
+            - no-dry-run
+            - private-ip-address
+            - public-ip
+    associate-auto-scaling-group:
+        OutputField: Output
+        Required:
+            - auto-scaling-group-name
+            - instance-id
+        Args:
+            - account-id
+            - cli-input-json
+            - generate-cli-skeleton
+    associate-client-vpn-target-network:
+        OutputField: Output
+        Required:
+            - client-vpn-endpoint-id
+            - subnet-id
+        Args:
+            - account-id
+            - cli-input-json
+            - client-token
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    associate-dhcp-options:
+        OutputField: Output
+        Required: []
+        Args: []
+    associate-enclave-certificate-iam-role:
+        OutputField: Output
+        Required: []
+        Args:
+            - certificate-arn
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - role-arn
+    associate-iam-instance-profile:
+        OutputField: Output
+        Required:
+            - iam-instance-profile
+            - instance-id
+        Args:
+            - account-id
+            - cli-input-json
+            - generate-cli-skeleton
+    associate-instance-event-window:
+        OutputField: Output
+        Required:
+            - association-target
+            - instance-event-window-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    associate-route-table:
+        OutputField: Output
+        Required:
+            - route-table-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - gateway-id
+            - generate-cli-skeleton
+            - no-dry-run
+            - subnet-id
+    associate-subnet-cidr-block:
+        OutputField: Output
+        Required:
+            - ipv6-cidr-block
+            - subnet-id
+        Args:
+            - account-id
+            - cli-input-json
+            - generate-cli-skeleton
+    associate-transit-gateway-multicast-domain:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - subnet-ids
+            - transit-gateway-attachment-id
+            - transit-gateway-multicast-domain-id
+    associate-transit-gateway-route-table:
+        OutputField: Output
+        Required:
+            - transit-gateway-attachment-id
+            - transit-gateway-route-table-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    associate-trunk-interface:
+        OutputField: Output
+        Required:
+            - branch-interface-id
+            - trunk-interface-id
+        Args:
+            - cli-input-json
+            - client-token
+            - dry-run
+            - generate-cli-skeleton
+            - gre-key
+            - no-dry-run
+            - vlan-id
+    associate-vpc-cidr-block:
+        OutputField: Output
+        Required:
+            - vpc-id
+        Args:
+            - account-id
+            - amazon-provided-ipv6-cidr-block
+            - cidr-block
+            - cli-input-json
+            - generate-cli-skeleton
+            - ipv6-cidr-block
+            - ipv6-cidr-block-network-border-group
+            - ipv6-pool
+            - no-amazon-provided-ipv6-cidr-block
+    attach-classic-link-vpc:
+        OutputField: Output
+        Required:
+            - groups
+            - instance-id
+            - vpc-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    attach-internet-gateway:
+        OutputField: Output
+        Required:
+            - internet-gateway-id
+            - vpc-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    attach-network-interface:
+        OutputField: Output
+        Required:
+            - device-index
+            - instance-id
+            - network-interface-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - network-card-index
+            - no-dry-run
+    attach-volume:
+        OutputField: Output
+        Required:
+            - device
+            - instance-id
+            - volume-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    attach-vpn-gateway:
+        OutputField: Output
+        Required:
+            - vpc-id
+            - vpn-gateway-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    authorize-client-vpn-ingress:
+        OutputField: Output
+        Required:
+            - client-vpn-endpoint-id
+            - target-network-cidr
+        Args:
+            - access-group-id
+            - account-id
+            - authorize-all-groups
+            - cli-input-json
+            - client-token
+            - description
+            - dry-run
+            - generate-cli-skeleton
+            - no-authorize-all-groups
+            - no-dry-run
+    authorize-security-group-egress:
+        OutputField: Output
+        Required:
+            - group-id
+        Args:
+            - account-id
+            - cidr
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - group-owner
+            - ip-permissions
+            - no-dry-run
+            - port
+            - protocol
+            - source-group
+            - tag-specifications
+    authorize-security-group-ingress:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cidr
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - group-id
+            - group-name
+            - group-owner
+            - ip-permissions
+            - no-dry-run
+            - port
+            - protocol
+            - source-group
+            - tag-specifications
+    bundle-instance:
+        OutputField: Output
+        Required:
+            - instance-id
+        Args:
+            - account-id
+            - bucket
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - owner-akid
+            - owner-sak
+            - policy
+            - prefix
+            - storage
+    cancel-bundle-task:
+        OutputField: Output
+        Required:
+            - bundle-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    cancel-capacity-reservation:
+        OutputField: Output
+        Required:
+            - capacity-reservation-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    cancel-conversion-task:
+        OutputField: Output
+        Required:
+            - conversion-task-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - reason-message
+    cancel-export-task:
+        OutputField: Output
+        Required:
+            - export-task-id
+        Args:
+            - account-id
+            - cli-input-json
+            - generate-cli-skeleton
+    cancel-import-task:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cancel-reason
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - import-task-id
+            - no-dry-run
+    cancel-reserved-instances-listing:
+        OutputField: Output
+        Required:
+            - reserved-instances-listing-id
+        Args:
+            - account-id
+            - cli-input-json
+            - generate-cli-skeleton
+    cancel-spot-fleet-requests:
+        OutputField: Output
+        Required:
+            - no-terminate-instances
+            - spot-fleet-request-ids
+            - terminate-instances
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    cancel-spot-instance-requests:
+        OutputField: Output
+        Required:
+            - spot-instance-request-ids
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    confirm-product-instance:
+        OutputField: Output
+        Required:
+            - instance-id
+            - product-code
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    copy-fpga-image:
+        OutputField: Output
+        Required:
+            - source-fpga-image-id
+            - source-region
+        Args:
+            - account-id
+            - cli-input-json
+            - client-token
+            - description
+            - dry-run
+            - generate-cli-skeleton
+            - name
+            - no-dry-run
+    copy-image:
+        OutputField: Output
+        Required:
+            - name
+            - source-image-id
+            - source-region
+        Args:
+            - account-id
+            - cli-input-json
+            - client-token
+            - description
+            - destination-outpost-arn
+            - dry-run
+            - encrypted
+            - generate-cli-skeleton
+            - kms-key-id
+            - no-dry-run
+            - no-encrypted
+    copy-snapshot:
+        OutputField: Output
+        Required:
+            - source-region
+            - source-snapshot-id
+        Args:
+            - account-id
+            - cli-input-json
+            - description
+            - destination-outpost-arn
+            - destination-region
+            - dry-run
+            - encrypted
+            - generate-cli-skeleton
+            - kms-key-id
+            - no-dry-run
+            - no-encrypted
+            - presigned-url
+            - tag-specifications
+    create-capacity-reservation:
+        OutputField: Output
+        Required:
+            - instance-count
+            - instance-platform
+            - instance-type
+        Args:
+            - account-id
+            - availability-zone
+            - availability-zone-id
+            - cli-input-json
+            - client-token
+            - dry-run
+            - ebs-optimized
+            - end-date
+            - end-date-type
+            - ephemeral-storage
+            - generate-cli-skeleton
+            - instance-match-criteria
+            - no-dry-run
+            - no-ebs-optimized
+            - no-ephemeral-storage
+            - outpost-arn
+            - tag-specifications
+            - tenancy
+    create-carrier-gateway:
+        OutputField: Output
+        Required:
+            - vpc-id
+        Args:
+            - cli-input-json
+            - client-token
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - tag-specifications
+    create-client-vpn-endpoint:
+        OutputField: Output
+        Required:
+            - authentication-options
+            - client-cidr-block
+            - connection-log-options
+            - server-certificate-arn
+        Args:
+            - account-id
+            - cli-input-json
+            - client-connect-options
+            - client-token
+            - description
+            - dns-servers
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - no-split-tunnel
+            - security-group-ids
+            - self-service-portal
+            - split-tunnel
+            - tag-specifications
+            - transport-protocol
+            - vpc-id
+            - vpn-port
+    create-client-vpn-route:
+        OutputField: Output
+        Required:
+            - client-vpn-endpoint-id
+            - destination-cidr-block
+            - target-vpc-subnet-id
+        Args:
+            - account-id
+            - cli-input-json
+            - client-token
+            - description
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    create-customer-gateway:
+        OutputField: Output
+        Required:
+            - bgp-asn
+            - type
+        Args:
+            - account-id
+            - certificate-arn
+            - cli-input-json
+            - device-name
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - public-ip
+            - tag-specifications
+    create-default-subnet:
+        OutputField: Output
+        Required:
+            - availability-zone
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    create-default-vpc:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    create-dhcp-options:
+        OutputField: Output
+        Required: []
+        Args: []
+    create-egress-only-internet-gateway:
+        OutputField: Output
+        Required:
+            - vpc-id
+        Args:
+            - account-id
+            - cli-input-json
+            - client-token
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - tag-specifications
+    create-fleet:
+        OutputField: Output
+        Required:
+            - launch-template-configs
+            - target-capacity-specification
+        Args:
+            - account-id
+            - cli-input-json
+            - client-token
+            - context
+            - dry-run
+            - excess-capacity-termination-policy
+            - generate-cli-skeleton
+            - no-dry-run
+            - no-replace-unhealthy-instances
+            - no-terminate-instances-with-expiration
+            - on-demand-options
+            - replace-unhealthy-instances
+            - spot-options
+            - tag-specifications
+            - terminate-instances-with-expiration
+            - type
+            - valid-from
+            - valid-until
+    create-flow-logs:
+        OutputField: Output
+        Required:
+            - resource-ids
+            - resource-type
+            - traffic-type
+        Args:
+            - account-id
+            - cli-input-json
+            - client-token
+            - deliver-logs-permission-arn
+            - dry-run
+            - generate-cli-skeleton
+            - log-destination
+            - log-destination-type
+            - log-format
+            - log-group-name
+            - max-aggregation-interval
+            - no-dry-run
+            - tag-specifications
+    create-fpga-image:
+        OutputField: Output
+        Required:
+            - input-storage-location
+        Args:
+            - account-id
+            - cli-input-json
+            - client-token
+            - description
+            - dry-run
+            - generate-cli-skeleton
+            - logs-storage-location
+            - name
+            - no-dry-run
+            - tag-specifications
+    create-image:
+        OutputField: Output
+        Required:
+            - instance-id
+            - name
+        Args:
+            - account-id
+            - block-device-mappings
+            - cli-input-json
+            - description
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - no-reboot
+            - reboot
+            - tag-specifications
+    create-instance-event-window:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - cron-expression
+            - dry-run
+            - generate-cli-skeleton
+            - name
+            - no-dry-run
+            - tag-specifications
+            - time-ranges
+    create-instance-export-task:
+        OutputField: Output
+        Required:
+            - export-to-s3-task
+            - instance-id
+            - target-environment
+        Args:
+            - account-id
+            - cli-input-json
+            - description
+            - generate-cli-skeleton
+            - tag-specifications
+    create-internet-gateway:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - tag-specifications
+    create-key-pair:
+        OutputField: Output
+        Required:
+            - key-name
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - tag-specifications
+    create-launch-template:
+        OutputField: Output
+        Required:
+            - launch-template-data
+            - launch-template-name
+        Args:
+            - account-id
+            - cli-input-json
+            - client-token
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - tag-specifications
+            - version-description
+    create-launch-template-version:
+        OutputField: Output
+        Required:
+            - launch-template-data
+        Args:
+            - account-id
+            - cli-input-json
+            - client-token
+            - dry-run
+            - generate-cli-skeleton
+            - launch-template-id
+            - launch-template-name
+            - no-dry-run
+            - source-version
+            - version-description
+    create-local-gateway-route:
+        OutputField: Output
+        Required:
+            - destination-cidr-block
+            - local-gateway-route-table-id
+            - local-gateway-virtual-interface-group-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    create-local-gateway-route-table-vpc-association:
+        OutputField: Output
+        Required:
+            - local-gateway-route-table-id
+            - vpc-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - tag-specifications
+    create-managed-prefix-list:
+        OutputField: Output
+        Required:
+            - address-family
+            - max-entries
+            - prefix-list-name
+        Args:
+            - account-id
+            - cli-input-json
+            - client-token
+            - dry-run
+            - entries
+            - generate-cli-skeleton
+            - no-dry-run
+            - tag-specifications
+    create-nat-gateway:
+        OutputField: Output
+        Required:
+            - subnet-id
+        Args:
+            - account-id
+            - allocation-id
+            - cli-input-json
+            - client-token
+            - connectivity-type
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - tag-specifications
+    create-network-acl:
+        OutputField: Output
+        Required:
+            - vpc-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - tag-specifications
+    create-network-acl-entry:
+        OutputField: Output
+        Required:
+            - egress
+            - ingress
+            - network-acl-id
+            - protocol
+            - rule-action
+            - rule-number
+        Args:
+            - account-id
+            - cidr-block
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - icmp-type-code
+            - ipv6-cidr-block
+            - no-dry-run
+            - port-range
+    create-network-insights-path:
+        OutputField: Output
+        Required:
+            - destination
+            - protocol
+            - source
+        Args:
+            - cli-input-json
+            - client-token
+            - destination-ip
+            - destination-port
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - source-ip
+            - tag-specifications
+    create-network-interface:
+        OutputField: Output
+        Required:
+            - subnet-id
+        Args:
+            - account-id
+            - associate-public-ip-address
+            - cli-input-json
+            - client-token
+            - description
+            - dry-run
+            - generate-cli-skeleton
+            - groups
+            - interface-type
+            - ipv4-prefix-count
+            - ipv4-prefixes
+            - ipv6-address-count
+            - ipv6-addresses
+            - ipv6-prefix-count
+            - ipv6-prefixes
+            - no-associate-public-ip-address
+            - no-dry-run
+            - private-ip-address
+            - private-ip-addresses
+            - secondary-private-ip-address-count
+            - tag-specifications
+    create-network-interface-permission:
+        OutputField: Output
+        Required:
+            - network-interface-id
+            - permission
+        Args:
+            - account-id
+            - aws-account-id
+            - aws-service
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    create-notification:
+        OutputField: Output
+        Required:
+            - message
+            - severity
+            - type
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    create-placement-group:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - group-name
+            - no-dry-run
+            - partition-count
+            - strategy
+            - tag-specifications
+    create-replace-root-volume-task:
+        OutputField: Output
+        Required:
+            - instance-id
+        Args:
+            - cli-input-json
+            - client-token
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - snapshot-id
+            - tag-specifications
+    create-reserved-instances-listing:
+        OutputField: Output
+        Required:
+            - client-token
+            - instance-count
+            - price-schedules
+            - reserved-instances-id
+        Args:
+            - account-id
+            - cli-input-json
+            - generate-cli-skeleton
+    create-restore-image-task:
+        OutputField: Output
+        Required:
+            - bucket
+            - object-key
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - name
+            - no-dry-run
+            - tag-specifications
+    create-route:
+        OutputField: Output
+        Required:
+            - route-table-id
+        Args:
+            - account-id
+            - carrier-gateway-id
+            - cli-input-json
+            - destination-cidr-block
+            - destination-ipv6-cidr-block
+            - destination-prefix-list-id
+            - dry-run
+            - egress-only-internet-gateway-id
+            - gateway-id
+            - generate-cli-skeleton
+            - instance-id
+            - local-gateway-id
+            - nat-gateway-id
+            - network-interface-id
+            - no-dry-run
+            - transit-gateway-id
+            - vpc-endpoint-id
+            - vpc-peering-connection-id
+    create-route-table:
+        OutputField: Output
+        Required:
+            - vpc-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - tag-specifications
+    create-security-group:
+        OutputField: Output
+        Required:
+            - description
+            - group-name
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - tag-specifications
+            - vpc-id
+    create-snapshot:
+        OutputField: Output
+        Required:
+            - volume-id
+        Args:
+            - account-id
+            - cli-input-json
+            - description
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - outpost-arn
+            - tag-specifications
+    create-snapshots:
+        OutputField: Output
+        Required:
+            - instance-specification
+        Args:
+            - account-id
+            - cli-input-json
+            - copy-tags-from-source
+            - description
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - outpost-arn
+            - tag-specifications
+    create-spot-datafeed-subscription:
+        OutputField: Output
+        Required:
+            - bucket
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - prefix
+    create-store-image-task:
+        OutputField: Output
+        Required:
+            - bucket
+            - image-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - s3-object-tags
+    create-subnet:
+        OutputField: Output
+        Required:
+            - cidr-block
+            - vpc-id
+        Args:
+            - account-id
+            - availability-zone
+            - availability-zone-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - ipv6-cidr-block
+            - no-dry-run
+            - outpost-arn
+            - tag-specifications
+    create-subnet-cidr-reservation:
+        OutputField: Output
+        Required:
+            - cidr
+            - reservation-type
+            - subnet-id
+        Args:
+            - cli-input-json
+            - description
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - tag-specifications
+    create-tags:
+        OutputField: Output
+        Required:
+            - resources
+            - tags
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    create-traffic-mirror-filter:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - client-token
+            - description
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - tag-specifications
+    create-traffic-mirror-filter-rule:
+        OutputField: Output
+        Required:
+            - destination-cidr-block
+            - rule-action
+            - rule-number
+            - source-cidr-block
+            - traffic-direction
+            - traffic-mirror-filter-id
+        Args:
+            - account-id
+            - cli-input-json
+            - client-token
+            - description
+            - destination-port-range
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - protocol
+            - source-port-range
+    create-traffic-mirror-session:
+        OutputField: Output
+        Required:
+            - network-interface-id
+            - session-number
+            - traffic-mirror-filter-id
+            - traffic-mirror-target-id
+        Args:
+            - account-id
+            - cli-input-json
+            - client-token
+            - description
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - packet-length
+            - tag-specifications
+            - virtual-network-id
+    create-traffic-mirror-target:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - client-token
+            - description
+            - dry-run
+            - generate-cli-skeleton
+            - network-interface-id
+            - network-load-balancer-arn
+            - no-dry-run
+            - tag-specifications
+    create-transit-gateway:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - description
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - options
+            - tag-specifications
+    create-transit-gateway-connect:
+        OutputField: Output
+        Required:
+            - options
+            - transport-transit-gateway-attachment-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - tag-specifications
+    create-transit-gateway-connect-peer:
+        OutputField: Output
+        Required:
+            - inside-cidr-blocks
+            - peer-address
+            - transit-gateway-attachment-id
+        Args:
+            - bgp-options
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - tag-specifications
+            - transit-gateway-address
+    create-transit-gateway-multicast-domain:
+        OutputField: Output
+        Required:
+            - transit-gateway-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - options
+            - tag-specifications
+    create-transit-gateway-peering-attachment:
+        OutputField: Output
+        Required:
+            - peer-account-id
+            - peer-region
+            - peer-transit-gateway-id
+            - transit-gateway-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - tag-specifications
+    create-transit-gateway-prefix-list-reference:
+        OutputField: Output
+        Required:
+            - prefix-list-id
+            - transit-gateway-route-table-id
+        Args:
+            - blackhole
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-blackhole
+            - no-dry-run
+            - transit-gateway-attachment-id
+    create-transit-gateway-route:
+        OutputField: Output
+        Required:
+            - destination-cidr-block
+            - transit-gateway-route-table-id
+        Args:
+            - account-id
+            - blackhole
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-blackhole
+            - no-dry-run
+            - transit-gateway-attachment-id
+    create-transit-gateway-route-table:
+        OutputField: Output
+        Required:
+            - transit-gateway-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - tag-specifications
+    create-transit-gateway-vpc-attachment:
+        OutputField: Output
+        Required:
+            - subnet-ids
+            - transit-gateway-id
+            - vpc-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - options
+            - tag-specifications
+    create-volume:
+        OutputField: Output
+        Required:
+            - availability-zone
+        Args:
+            - account-id
+            - cli-input-json
+            - client-token
+            - dry-run
+            - encrypted
+            - generate-cli-skeleton
+            - iops
+            - kms-key-id
+            - multi-attach-enabled
+            - no-dry-run
+            - no-encrypted
+            - no-multi-attach-enabled
+            - outpost-arn
+            - size
+            - snapshot-id
+            - tag-specifications
+            - throughput
+            - volume-type
+    create-vpc:
+        OutputField: Output
+        Required:
+            - cidr-block
+        Args:
+            - account-id
+            - amazon-provided-ipv6-cidr-block
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - instance-tenancy
+            - ipv6-cidr-block
+            - ipv6-cidr-block-network-border-group
+            - ipv6-pool
+            - no-amazon-provided-ipv6-cidr-block
+            - no-dry-run
+            - tag-specifications
+    create-vpc-endpoint:
+        OutputField: Output
+        Required:
+            - service-name
+            - vpc-id
+        Args:
+            - account-id
+            - cli-input-json
+            - client-token
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - no-private-dns-enabled
+            - policy-document
+            - private-dns-enabled
+            - route-table-ids
+            - security-group-ids
+            - subnet-ids
+            - tag-specifications
+            - vpc-endpoint-type
+    create-vpc-endpoint-connection-notification:
+        OutputField: Output
+        Required:
+            - connection-events
+            - connection-notification-arn
+        Args:
+            - account-id
+            - cli-input-json
+            - client-token
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - service-id
+            - vpc-endpoint-id
+    create-vpc-endpoint-service-configuration:
+        OutputField: Output
+        Required: []
+        Args:
+            - acceptance-required
+            - account-id
+            - cli-input-json
+            - client-token
+            - dry-run
+            - gateway-load-balancer-arns
+            - generate-cli-skeleton
+            - network-load-balancer-arns
+            - no-acceptance-required
+            - no-dry-run
+            - private-dns-name
+            - tag-specifications
+    create-vpc-peering-connection:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - peer-owner-id
+            - peer-region
+            - peer-vpc-id
+            - tag-specifications
+            - vpc-id
+    create-vpn-connection:
+        OutputField: Output
+        Required:
+            - customer-gateway-id
+            - type
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - options
+            - tag-specifications
+            - transit-gateway-id
+            - vpn-gateway-id
+    create-vpn-connection-route:
+        OutputField: Output
+        Required:
+            - destination-cidr-block
+            - vpn-connection-id
+        Args:
+            - account-id
+            - cli-input-json
+            - generate-cli-skeleton
+    create-vpn-gateway:
+        OutputField: Output
+        Required:
+            - type
+        Args:
+            - account-id
+            - amazon-side-asn
+            - availability-zone
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - tag-specifications
+    delete-carrier-gateway:
+        OutputField: Output
+        Required:
+            - carrier-gateway-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-client-vpn-endpoint:
+        OutputField: Output
+        Required:
+            - client-vpn-endpoint-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-client-vpn-route:
+        OutputField: Output
+        Required:
+            - client-vpn-endpoint-id
+            - destination-cidr-block
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - target-vpc-subnet-id
+    delete-compute-host:
+        OutputField: Output
+        Required:
+            - compute-host-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-customer-gateway:
+        OutputField: Output
+        Required:
+            - customer-gateway-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-dhcp-options:
+        OutputField: Output
+        Required: []
+        Args: []
+    delete-egress-only-internet-gateway:
+        OutputField: Output
+        Required:
+            - egress-only-internet-gateway-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-fleets:
+        OutputField: Output
+        Required:
+            - fleet-ids
+            - no-terminate-instances
+            - terminate-instances
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-flow-logs:
+        OutputField: Output
+        Required:
+            - flow-log-ids
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-fpga-image:
+        OutputField: Output
+        Required:
+            - fpga-image-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-instance-event-window:
+        OutputField: Output
+        Required:
+            - instance-event-window-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - force-delete
+            - generate-cli-skeleton
+            - no-dry-run
+            - no-force-delete
+    delete-internet-gateway:
+        OutputField: Output
+        Required:
+            - internet-gateway-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-key-pair:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - key-name
+            - key-pair-id
+            - no-dry-run
+    delete-launch-template:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - launch-template-id
+            - launch-template-name
+            - no-dry-run
+    delete-launch-template-versions:
+        OutputField: Output
+        Required:
+            - versions
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - launch-template-id
+            - launch-template-name
+            - no-dry-run
+    delete-local-gateway-route:
+        OutputField: Output
+        Required:
+            - destination-cidr-block
+            - local-gateway-route-table-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-local-gateway-route-table-vpc-association:
+        OutputField: Output
+        Required:
+            - local-gateway-route-table-vpc-association-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-managed-prefix-list:
+        OutputField: Output
+        Required:
+            - prefix-list-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-nat-gateway:
+        OutputField: Output
+        Required:
+            - nat-gateway-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-network-acl:
+        OutputField: Output
+        Required:
+            - network-acl-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-network-acl-entry:
+        OutputField: Output
+        Required:
+            - egress
+            - ingress
+            - network-acl-id
+            - rule-number
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-network-insights-analysis:
+        OutputField: Output
+        Required:
+            - network-insights-analysis-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-network-insights-path:
+        OutputField: Output
+        Required:
+            - network-insights-path-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-network-interface:
+        OutputField: Output
+        Required:
+            - network-interface-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-network-interface-permission:
+        OutputField: Output
+        Required:
+            - network-interface-permission-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - force
+            - generate-cli-skeleton
+            - no-dry-run
+            - no-force
+    delete-notifications:
+        OutputField: Output
+        Required:
+            - notification-ids
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-placement-group:
+        OutputField: Output
+        Required:
+            - group-name
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-queued-reserved-instances:
+        OutputField: Output
+        Required:
+            - reserved-instances-ids
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-route:
+        OutputField: Output
+        Required:
+            - route-table-id
+        Args:
+            - account-id
+            - cli-input-json
+            - destination-cidr-block
+            - destination-ipv6-cidr-block
+            - destination-prefix-list-id
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-route-table:
+        OutputField: Output
+        Required:
+            - route-table-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-security-group:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - group-id
+            - group-name
+            - no-dry-run
+    delete-snapshot:
+        OutputField: Output
+        Required:
+            - snapshot-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-spot-datafeed-subscription:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-subnet:
+        OutputField: Output
+        Required:
+            - subnet-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-subnet-cidr-reservation:
+        OutputField: Output
+        Required:
+            - subnet-cidr-reservation-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-tags:
+        OutputField: Output
+        Required:
+            - resources
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - tags
+    delete-traffic-mirror-filter:
+        OutputField: Output
+        Required:
+            - traffic-mirror-filter-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-traffic-mirror-filter-rule:
+        OutputField: Output
+        Required:
+            - traffic-mirror-filter-rule-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-traffic-mirror-session:
+        OutputField: Output
+        Required:
+            - traffic-mirror-session-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-traffic-mirror-target:
+        OutputField: Output
+        Required:
+            - traffic-mirror-target-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-transit-gateway:
+        OutputField: Output
+        Required:
+            - transit-gateway-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-transit-gateway-connect:
+        OutputField: Output
+        Required:
+            - transit-gateway-attachment-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-transit-gateway-connect-peer:
+        OutputField: Output
+        Required:
+            - transit-gateway-connect-peer-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-transit-gateway-multicast-domain:
+        OutputField: Output
+        Required:
+            - transit-gateway-multicast-domain-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-transit-gateway-peering-attachment:
+        OutputField: Output
+        Required:
+            - transit-gateway-attachment-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-transit-gateway-prefix-list-reference:
+        OutputField: Output
+        Required:
+            - prefix-list-id
+            - transit-gateway-route-table-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-transit-gateway-route:
+        OutputField: Output
+        Required:
+            - destination-cidr-block
+            - transit-gateway-route-table-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-transit-gateway-route-table:
+        OutputField: Output
+        Required:
+            - transit-gateway-route-table-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-transit-gateway-vpc-attachment:
+        OutputField: Output
+        Required:
+            - transit-gateway-attachment-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-volume:
+        OutputField: Output
+        Required:
+            - volume-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-vpc:
+        OutputField: Output
+        Required:
+            - vpc-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-vpc-endpoint-connection-notifications:
+        OutputField: Output
+        Required:
+            - connection-notification-ids
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-vpc-endpoint-service-configurations:
+        OutputField: Output
+        Required:
+            - service-ids
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-vpc-endpoints:
+        OutputField: Output
+        Required:
+            - vpc-endpoint-ids
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-vpc-peering-connection:
+        OutputField: Output
+        Required:
+            - vpc-peering-connection-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-vpn-connection:
+        OutputField: Output
+        Required:
+            - vpn-connection-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    delete-vpn-connection-route:
+        OutputField: Output
+        Required:
+            - destination-cidr-block
+            - vpn-connection-id
+        Args:
+            - account-id
+            - cli-input-json
+            - generate-cli-skeleton
+    delete-vpn-gateway:
+        OutputField: Output
+        Required:
+            - vpn-gateway-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    deprovision-byoip-cidr:
+        OutputField: Output
+        Required:
+            - cidr
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    deregister-image:
+        OutputField: Output
+        Required:
+            - image-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    deregister-instance-event-notification-attributes:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - instance-tag-attribute
+            - no-dry-run
+    deregister-transit-gateway-multicast-group-members:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - group-ip-address
+            - network-interface-ids
+            - no-dry-run
+            - transit-gateway-multicast-domain-id
+    deregister-transit-gateway-multicast-group-sources:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - group-ip-address
+            - network-interface-ids
+            - no-dry-run
+            - transit-gateway-multicast-domain-id
+    describe-account-attributes:
+        OutputField: Output
+        Required: []
+        Args:
+            - attribute-names
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    describe-addresses:
+        OutputField: Output
+        Required: []
+        Args:
+            - allocation-ids
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - no-dry-run
+            - public-ips
+    describe-addresses-attribute:
+        OutputField: Output
+        Required: []
+        Args:
+            - allocation-ids
+            - attribute
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+    describe-aggregate-id-format:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    describe-auto-scaling-group-associations:
+        OutputField: Output
+        Required:
+            - instance-ids
+        Args:
+            - cli-input-json
+            - generate-cli-skeleton
+    describe-availability-zones:
+        OutputField: Output
+        Required: []
+        Args:
+            - all-availability-zones
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - no-all-availability-zones
+            - no-dry-run
+            - zone-ids
+            - zone-names
+    describe-bundle-tasks:
+        OutputField: Output
+        Required: []
+        Args:
+            - bundle-ids
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - no-dry-run
+    describe-byoip-cidrs:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-capacity-reservations:
+        OutputField: Output
+        Required: []
+        Args:
+            - capacity-reservation-ids
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-carrier-gateways:
+        OutputField: Output
+        Required: []
+        Args:
+            - carrier-gateway-ids
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+    describe-classic-link-instances:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - instance-ids
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-client-vpn-authorization-rules:
+        OutputField: Output
+        Required:
+            - client-vpn-endpoint-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-client-vpn-connections:
+        OutputField: Output
+        Required:
+            - client-vpn-endpoint-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-client-vpn-endpoints:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - client-vpn-endpoint-ids
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-client-vpn-routes:
+        OutputField: Output
+        Required:
+            - client-vpn-endpoint-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-client-vpn-target-networks:
+        OutputField: Output
+        Required:
+            - client-vpn-endpoint-id
+        Args:
+            - association-ids
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-coip-pools:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+            - pool-ids
+    describe-compute-hosts:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - compute-host-ids
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - hostnames
+            - max-results
+            - next-token
+            - no-dry-run
+    describe-conversion-tasks:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - conversion-task-ids
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    describe-customer-gateways:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - customer-gateway-ids
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - no-dry-run
+    describe-dhcp-options:
+        OutputField: Output
+        Required: []
+        Args: []
+    describe-egress-only-internet-gateways:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - egress-only-internet-gateway-ids
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-elastic-gpus:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - elastic-gpu-ids
+            - filters
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+    describe-export-image-tasks:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - export-image-task-ids
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-export-tasks:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - export-task-ids
+            - filters
+            - generate-cli-skeleton
+    describe-fast-snapshot-restores:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-fleet-history:
+        OutputField: Output
+        Required:
+            - fleet-id
+            - start-time
+        Args:
+            - cli-input-json
+            - dry-run
+            - event-type
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+    describe-fleet-instances:
+        OutputField: Output
+        Required:
+            - fleet-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+    describe-fleets:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - fleet-ids
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-flow-logs:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filter
+            - flow-log-ids
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-fpga-image-attribute:
+        OutputField: Output
+        Required:
+            - attribute
+            - fpga-image-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    describe-fpga-images:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - fpga-image-ids
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - owners
+            - page-size
+            - starting-token
+    describe-host-reservation-offerings:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - filter
+            - generate-cli-skeleton
+            - max-duration
+            - max-items
+            - min-duration
+            - offering-id
+            - page-size
+            - starting-token
+    describe-host-reservations:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - filter
+            - generate-cli-skeleton
+            - host-reservation-id-set
+            - max-items
+            - page-size
+            - starting-token
+    describe-hosts:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - filter
+            - generate-cli-skeleton
+            - host-ids
+            - max-items
+            - page-size
+            - starting-token
+    describe-iam-instance-profile-associations:
+        OutputField: Output
+        Required: []
+        Args:
+            - association-ids
+            - cli-input-json
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - page-size
+            - starting-token
+    describe-id-format:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - generate-cli-skeleton
+            - resource
+    describe-identity-id-format:
+        OutputField: Output
+        Required:
+            - principal-arn
+        Args:
+            - cli-input-json
+            - generate-cli-skeleton
+            - resource
+    describe-image-attribute:
+        OutputField: Output
+        Required:
+            - attribute
+            - image-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    describe-images:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - executable-users
+            - filters
+            - generate-cli-skeleton
+            - image-ids
+            - include-deprecated
+            - no-dry-run
+            - no-include-deprecated
+            - owners
+    describe-import-image-tasks:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - import-task-ids
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-import-snapshot-tasks:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - import-task-ids
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-instance-attribute:
+        OutputField: Output
+        Required:
+            - attribute
+            - instance-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    describe-instance-credit-specifications:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - instance-ids
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-instance-event-notification-attributes:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    describe-instance-event-windows:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - instance-event-window-ids
+            - max-results
+            - next-token
+            - no-dry-run
+    describe-instance-placements:
+        OutputField: Output
+        Required:
+            - instance-ids
+        Args:
+            - cli-input-json
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+    describe-instance-status:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - include-all-instances
+            - instance-ids
+            - max-items
+            - no-dry-run
+            - no-include-all-instances
+            - page-size
+            - starting-token
+    describe-instance-type-offerings:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - location-type
+            - max-results
+            - next-token
+            - no-dry-run
+    describe-instance-types:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - instance-types
+            - max-results
+            - next-token
+            - no-dry-run
+    describe-instances:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - instance-ids
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-internet-gateways:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - internet-gateway-ids
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-ipv6-pools:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+            - pool-ids
+    describe-key-pairs:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - key-names
+            - key-pair-ids
+            - no-dry-run
+    describe-launch-template-versions:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - launch-template-id
+            - launch-template-name
+            - max-items
+            - max-version
+            - min-version
+            - no-dry-run
+            - page-size
+            - starting-token
+            - versions
+    describe-launch-templates:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - launch-template-ids
+            - launch-template-names
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-local-gateway-route-table-virtual-interface-group-associations:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - local-gateway-route-table-virtual-interface-group-association-ids
+            - max-results
+            - next-token
+            - no-dry-run
+    describe-local-gateway-route-table-vpc-associations:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - local-gateway-route-table-vpc-association-ids
+            - max-results
+            - next-token
+            - no-dry-run
+    describe-local-gateway-route-tables:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - local-gateway-route-table-ids
+            - max-results
+            - next-token
+            - no-dry-run
+    describe-local-gateway-virtual-interface-groups:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - local-gateway-virtual-interface-group-ids
+            - max-results
+            - next-token
+            - no-dry-run
+    describe-local-gateway-virtual-interfaces:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - local-gateway-virtual-interface-ids
+            - max-results
+            - next-token
+            - no-dry-run
+    describe-local-gateways:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - local-gateway-ids
+            - max-results
+            - next-token
+            - no-dry-run
+    describe-managed-prefix-lists:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+            - prefix-list-ids
+    describe-moving-addresses:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - public-ips
+            - starting-token
+    describe-nat-gateways:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filter
+            - generate-cli-skeleton
+            - max-items
+            - nat-gateway-ids
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-network-acls:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - network-acl-ids
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-network-insights-analyses:
+        OutputField: Output
+        Required: []
+        Args:
+            - analysis-end-time
+            - analysis-start-time
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-results
+            - network-insights-analysis-ids
+            - network-insights-path-id
+            - next-token
+            - no-dry-run
+    describe-network-insights-paths:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-results
+            - network-insights-path-ids
+            - next-token
+            - no-dry-run
+    describe-network-interface-attribute:
+        OutputField: Output
+        Required:
+            - network-interface-id
+        Args:
+            - attribute
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    describe-network-interface-permissions:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - network-interface-permission-ids
+            - page-size
+            - starting-token
+    describe-network-interfaces:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - network-interface-ids
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-network-interfaces-spc:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-results
+            - network-interface-ids
+            - next-token
+            - no-dry-run
+    describe-notifications:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+            - notification-ids
+            - severity
+            - state
+            - type
+    describe-placement-groups:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - group-ids
+            - group-names
+            - no-dry-run
+    describe-prefix-lists:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - prefix-list-ids
+            - starting-token
+    describe-principal-id-format:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - resources
+            - starting-token
+    describe-public-ipv4-pools:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - page-size
+            - pool-ids
+            - starting-token
+    describe-regions:
+        OutputField: Output
+        Required: []
+        Args:
+            - all-regions
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - no-all-regions
+            - no-dry-run
+            - region-names
+    describe-replace-root-volume-tasks:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+            - replace-root-volume-task-ids
+    describe-reserved-instances:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - no-dry-run
+            - offering-class
+            - offering-type
+            - reserved-instances-ids
+    describe-reserved-instances-listings:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - filters
+            - generate-cli-skeleton
+            - reserved-instances-id
+            - reserved-instances-listing-id
+    describe-reserved-instances-modifications:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - reserved-instances-modification-ids
+            - starting-token
+    describe-reserved-instances-offerings:
+        OutputField: Output
+        Required: []
+        Args:
+            - availability-zone
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - include-marketplace
+            - instance-tenancy
+            - instance-type
+            - max-duration
+            - max-instance-count
+            - max-items
+            - min-duration
+            - no-dry-run
+            - no-include-marketplace
+            - offering-class
+            - offering-type
+            - page-size
+            - product-description
+            - reserved-instances-offering-ids
+            - starting-token
+    describe-resources:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    describe-route-tables:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - route-table-ids
+            - starting-token
+    describe-scheduled-instance-availability:
+        OutputField: Output
+        Required:
+            - first-slot-start-time-range
+            - recurrence
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - max-slot-duration-in-hours
+            - min-slot-duration-in-hours
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-scheduled-instances:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - scheduled-instance-ids
+            - slot-start-time-range
+            - starting-token
+    describe-security-group-references:
+        OutputField: Output
+        Required:
+            - group-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    describe-security-group-rules:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+            - security-group-rule-ids
+    describe-security-groups:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - group-ids
+            - group-names
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-service-components:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - no-dry-run
+    describe-snapshot-attribute:
+        OutputField: Output
+        Required:
+            - attribute
+            - snapshot-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    describe-snapshots:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - owner-ids
+            - page-size
+            - restorable-by-user-ids
+            - snapshot-ids
+            - starting-token
+    describe-spot-datafeed-subscription:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    describe-spot-fleet-instances:
+        OutputField: Output
+        Required:
+            - spot-fleet-request-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-spot-fleet-request-history:
+        OutputField: Output
+        Required:
+            - spot-fleet-request-id
+            - start-time
+        Args:
+            - cli-input-json
+            - dry-run
+            - event-type
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+    describe-spot-fleet-requests:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - spot-fleet-request-ids
+            - starting-token
+    describe-spot-instance-requests:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - spot-instance-request-ids
+            - starting-token
+    describe-spot-price-history:
+        OutputField: Output
+        Required: []
+        Args:
+            - availability-zone
+            - cli-input-json
+            - dry-run
+            - end-time
+            - filters
+            - generate-cli-skeleton
+            - instance-types
+            - max-items
+            - no-dry-run
+            - page-size
+            - product-descriptions
+            - start-time
+            - starting-token
+    describe-stale-security-groups:
+        OutputField: Output
+        Required:
+            - vpc-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-store-image-tasks:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - image-ids
+            - max-results
+            - next-token
+            - no-dry-run
+    describe-subnets:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+            - subnet-ids
+    describe-tags:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-traffic-mirror-filters:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+            - traffic-mirror-filter-ids
+    describe-traffic-mirror-sessions:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+            - traffic-mirror-session-ids
+    describe-traffic-mirror-targets:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+            - traffic-mirror-target-ids
+    describe-transit-gateway-attachments:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+            - transit-gateway-attachment-ids
+    describe-transit-gateway-connect-peers:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+            - transit-gateway-connect-peer-ids
+    describe-transit-gateway-connects:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+            - transit-gateway-attachment-ids
+    describe-transit-gateway-multicast-domains:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+            - transit-gateway-multicast-domain-ids
+    describe-transit-gateway-peering-attachments:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+            - transit-gateway-attachment-ids
+    describe-transit-gateway-route-tables:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+            - transit-gateway-route-table-ids
+    describe-transit-gateway-vpc-attachments:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+            - transit-gateway-attachment-ids
+    describe-transit-gateways:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+            - transit-gateway-ids
+    describe-trunk-interface-associations:
+        OutputField: Output
+        Required: []
+        Args:
+            - association-ids
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+    describe-volume-attribute:
+        OutputField: Output
+        Required:
+            - attribute
+            - volume-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    describe-volume-status:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+            - volume-ids
+    describe-volumes:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+            - volume-ids
+    describe-volumes-modifications:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+            - volume-ids
+    describe-vpc-attribute:
+        OutputField: Output
+        Required:
+            - attribute
+            - vpc-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    describe-vpc-classic-link:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - no-dry-run
+            - vpc-ids
+    describe-vpc-classic-link-dns-support:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - generate-cli-skeleton
+            - max-items
+            - page-size
+            - starting-token
+            - vpc-ids
+    describe-vpc-endpoint-connection-notifications:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - connection-notification-id
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-vpc-endpoint-connections:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-vpc-endpoint-service-configurations:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - service-ids
+            - starting-token
+    describe-vpc-endpoint-service-permissions:
+        OutputField: Output
+        Required:
+            - service-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    describe-vpc-endpoint-services:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - service-names
+            - starting-token
+    describe-vpc-endpoints:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+            - vpc-endpoint-ids
+    describe-vpc-peering-connections:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+            - vpc-peering-connection-ids
+    describe-vpcs:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+            - vpc-ids
+    describe-vpn-connections:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - no-dry-run
+            - vpn-connection-ids
+    describe-vpn-gateways:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - no-dry-run
+            - vpn-gateway-ids
+    detach-classic-link-vpc:
+        OutputField: Output
+        Required:
+            - instance-id
+            - vpc-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    detach-internet-gateway:
+        OutputField: Output
+        Required:
+            - internet-gateway-id
+            - vpc-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    detach-network-interface:
+        OutputField: Output
+        Required:
+            - attachment-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - force
+            - generate-cli-skeleton
+            - no-dry-run
+            - no-force
+    detach-volume:
+        OutputField: Output
+        Required:
+            - volume-id
+        Args:
+            - account-id
+            - cli-input-json
+            - device
+            - dry-run
+            - force
+            - generate-cli-skeleton
+            - instance-id
+            - no-dry-run
+            - no-force
+    detach-vpn-gateway:
+        OutputField: Output
+        Required:
+            - vpc-id
+            - vpn-gateway-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    disable-ebs-encryption-by-default:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    disable-fast-snapshot-restores:
+        OutputField: Output
+        Required:
+            - availability-zones
+            - source-snapshot-ids
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    disable-image-deprecation:
+        OutputField: Output
+        Required:
+            - image-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    disable-serial-console-access:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    disable-transit-gateway-route-table-propagation:
+        OutputField: Output
+        Required:
+            - transit-gateway-attachment-id
+            - transit-gateway-route-table-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    disable-vgw-route-propagation:
+        OutputField: Output
+        Required:
+            - gateway-id
+            - route-table-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    disable-vpc-classic-link:
+        OutputField: Output
+        Required:
+            - vpc-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    disable-vpc-classic-link-dns-support:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - generate-cli-skeleton
+            - vpc-id
+    disassociate-address:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - association-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - public-ip
+    disassociate-auto-scaling-group:
+        OutputField: Output
+        Required:
+            - instance-id
+        Args:
+            - account-id
+            - cli-input-json
+            - generate-cli-skeleton
+    disassociate-client-vpn-target-network:
+        OutputField: Output
+        Required:
+            - association-id
+            - client-vpn-endpoint-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    disassociate-enclave-certificate-iam-role:
+        OutputField: Output
+        Required: []
+        Args:
+            - certificate-arn
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - role-arn
+    disassociate-iam-instance-profile:
+        OutputField: Output
+        Required:
+            - association-id
+        Args:
+            - account-id
+            - cli-input-json
+            - generate-cli-skeleton
+    disassociate-instance-event-window:
+        OutputField: Output
+        Required:
+            - association-target
+            - instance-event-window-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    disassociate-route-table:
+        OutputField: Output
+        Required:
+            - association-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    disassociate-subnet-cidr-block:
+        OutputField: Output
+        Required:
+            - association-id
+        Args:
+            - account-id
+            - cli-input-json
+            - generate-cli-skeleton
+    disassociate-transit-gateway-multicast-domain:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - subnet-ids
+            - transit-gateway-attachment-id
+            - transit-gateway-multicast-domain-id
+    disassociate-transit-gateway-route-table:
+        OutputField: Output
+        Required:
+            - transit-gateway-attachment-id
+            - transit-gateway-route-table-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    disassociate-trunk-interface:
+        OutputField: Output
+        Required:
+            - association-id
+        Args:
+            - cli-input-json
+            - client-token
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    disassociate-vpc-cidr-block:
+        OutputField: Output
+        Required:
+            - association-id
+        Args:
+            - account-id
+            - cli-input-json
+            - generate-cli-skeleton
+    enable-ebs-encryption-by-default:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    enable-fast-snapshot-restores:
+        OutputField: Output
+        Required:
+            - availability-zones
+            - source-snapshot-ids
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    enable-image-deprecation:
+        OutputField: Output
+        Required:
+            - deprecate-at
+            - image-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    enable-serial-console-access:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    enable-transit-gateway-route-table-propagation:
+        OutputField: Output
+        Required:
+            - transit-gateway-attachment-id
+            - transit-gateway-route-table-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    enable-vgw-route-propagation:
+        OutputField: Output
+        Required:
+            - gateway-id
+            - route-table-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    enable-volume-io:
+        OutputField: Output
+        Required:
+            - volume-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    enable-vpc-classic-link:
+        OutputField: Output
+        Required:
+            - vpc-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    enable-vpc-classic-link-dns-support:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - generate-cli-skeleton
+            - vpc-id
+    export-client-vpn-client-certificate-revocation-list:
+        OutputField: Output
+        Required:
+            - client-vpn-endpoint-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    export-client-vpn-client-configuration:
+        OutputField: Output
+        Required:
+            - client-vpn-endpoint-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    export-image:
+        OutputField: Output
+        Required:
+            - disk-image-format
+            - image-id
+            - s3-export-location
+        Args:
+            - account-id
+            - cli-input-json
+            - client-token
+            - description
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - role-name
+            - tag-specifications
+    export-transit-gateway-routes:
+        OutputField: Output
+        Required:
+            - s3-bucket
+            - transit-gateway-route-table-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - no-dry-run
+    generate-ec2-cmds:
+        OutputField: Result
+        Required: []
+        Args: []
+    get-associated-enclave-certificate-iam-roles:
+        OutputField: Output
+        Required: []
+        Args:
+            - certificate-arn
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    get-associated-ipv6-pool-cidrs:
+        OutputField: Output
+        Required:
+            - pool-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+    get-capacity-reservation-usage:
+        OutputField: Output
+        Required:
+            - capacity-reservation-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+    get-coip-pool-usage:
+        OutputField: Output
+        Required:
+            - pool-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+    get-console-output:
+        OutputField: Output
+        Required:
+            - instance-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - latest
+            - no-dry-run
+            - no-latest
+    get-console-screenshot:
+        OutputField: Output
+        Required:
+            - instance-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - no-wake-up
+            - wake-up
+    get-default-credit-specification:
+        OutputField: Output
+        Required:
+            - instance-family
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    get-ebs-default-kms-key-id:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    get-ebs-encryption-by-default:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    get-flow-logs-integration-template:
+        OutputField: Output
+        Required:
+            - config-delivery-s3-destination-arn
+            - flow-log-id
+            - integrate-services
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    get-groups-for-capacity-reservation:
+        OutputField: Output
+        Required:
+            - capacity-reservation-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+    get-host-reservation-purchase-preview:
+        OutputField: Output
+        Required:
+            - host-id-set
+            - offering-id
+        Args:
+            - cli-input-json
+            - generate-cli-skeleton
+    get-launch-template-data:
+        OutputField: Output
+        Required:
+            - instance-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    get-managed-prefix-list-associations:
+        OutputField: Output
+        Required:
+            - prefix-list-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+    get-managed-prefix-list-entries:
+        OutputField: Output
+        Required:
+            - prefix-list-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+            - target-version
+    get-password-data:
+        OutputField: Output
+        Required:
+            - instance-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - priv-launch-key
+    get-reserved-instances-exchange-quote:
+        OutputField: Output
+        Required:
+            - reserved-instance-ids
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - target-configurations
+    get-serial-console-access-status:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    get-subnet-cidr-reservations:
+        OutputField: Output
+        Required:
+            - subnet-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+    get-transit-gateway-attachment-propagations:
+        OutputField: Output
+        Required:
+            - transit-gateway-attachment-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    get-transit-gateway-multicast-domain-associations:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+            - transit-gateway-multicast-domain-id
+    get-transit-gateway-prefix-list-references:
+        OutputField: Output
+        Required:
+            - transit-gateway-route-table-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+    get-transit-gateway-route-table-associations:
+        OutputField: Output
+        Required:
+            - transit-gateway-route-table-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    get-transit-gateway-route-table-propagations:
+        OutputField: Output
+        Required:
+            - transit-gateway-route-table-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-items
+            - no-dry-run
+            - page-size
+            - starting-token
+    help:
+        OutputField: Output
+        Required: []
+        Args: []
+    import-client-vpn-client-certificate-revocation-list:
+        OutputField: Output
+        Required:
+            - certificate-revocation-list
+            - client-vpn-endpoint-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    import-image:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - architecture
+            - cli-input-json
+            - client-data
+            - client-token
+            - description
+            - disk-containers
+            - dry-run
+            - encrypted
+            - generate-cli-skeleton
+            - hypervisor
+            - kms-key-id
+            - license-specifications
+            - license-type
+            - no-dry-run
+            - no-encrypted
+            - platform
+            - role-name
+            - tag-specifications
+    import-key-pair:
+        OutputField: Output
+        Required:
+            - key-name
+            - public-key-material
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - tag-specifications
+    import-snapshot:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - client-data
+            - client-token
+            - description
+            - disk-container
+            - dry-run
+            - encrypted
+            - generate-cli-skeleton
+            - kms-key-id
+            - no-dry-run
+            - no-encrypted
+            - role-name
+            - tag-specifications
+    modify-address-attribute:
+        OutputField: Output
+        Required:
+            - allocation-id
+        Args:
+            - cli-input-json
+            - domain-name
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    modify-availability-zone-group:
+        OutputField: Output
+        Required:
+            - group-name
+            - opt-in-status
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    modify-capacity-reservation:
+        OutputField: Output
+        Required:
+            - capacity-reservation-id
+        Args:
+            - accept
+            - account-id
+            - cli-input-json
+            - dry-run
+            - end-date
+            - end-date-type
+            - generate-cli-skeleton
+            - instance-count
+            - no-accept
+            - no-dry-run
+    modify-client-vpn-endpoint:
+        OutputField: Output
+        Required:
+            - client-vpn-endpoint-id
+        Args:
+            - account-id
+            - cli-input-json
+            - client-connect-options
+            - connection-log-options
+            - description
+            - dns-servers
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - no-split-tunnel
+            - security-group-ids
+            - self-service-portal
+            - server-certificate-arn
+            - split-tunnel
+            - vpc-id
+            - vpn-port
+    modify-compute-host-attribute:
+        OutputField: Output
+        Required:
+            - attribute
+            - compute-host-id
+        Args:
+            - account-id
+            - cli-input-json
+            - generate-cli-skeleton
+            - instance-type
+            - value
+    modify-default-credit-specification:
+        OutputField: Output
+        Required:
+            - cpu-credits
+            - instance-family
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    modify-ebs-default-kms-key-id:
+        OutputField: Output
+        Required:
+            - kms-key-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    modify-fleet:
+        OutputField: Output
+        Required:
+            - fleet-id
+        Args:
+            - account-id
+            - cli-input-json
+            - context
+            - dry-run
+            - excess-capacity-termination-policy
+            - generate-cli-skeleton
+            - launch-template-configs
+            - no-dry-run
+            - target-capacity-specification
+    modify-fpga-image-attribute:
+        OutputField: Output
+        Required:
+            - fpga-image-id
+        Args:
+            - account-id
+            - attribute
+            - cli-input-json
+            - description
+            - dry-run
+            - generate-cli-skeleton
+            - load-permission
+            - name
+            - no-dry-run
+            - operation-type
+            - product-codes
+            - user-groups
+            - user-ids
+    modify-hosts:
+        OutputField: Output
+        Required:
+            - host-ids
+        Args:
+            - account-id
+            - auto-placement
+            - cli-input-json
+            - generate-cli-skeleton
+            - host-recovery
+            - instance-family
+            - instance-type
+    modify-id-format:
+        OutputField: Output
+        Required:
+            - no-use-long-ids
+            - resource
+            - use-long-ids
+        Args:
+            - account-id
+            - cli-input-json
+            - generate-cli-skeleton
+    modify-identity-id-format:
+        OutputField: Output
+        Required:
+            - no-use-long-ids
+            - principal-arn
+            - resource
+            - use-long-ids
+        Args:
+            - account-id
+            - cli-input-json
+            - generate-cli-skeleton
+    modify-image-attribute:
+        OutputField: Output
+        Required:
+            - image-id
+        Args:
+            - account-id
+            - attribute
+            - cli-input-json
+            - description
+            - dry-run
+            - generate-cli-skeleton
+            - launch-permission
+            - no-dry-run
+            - operation-type
+            - product-codes
+            - user-groups
+            - user-ids
+            - value
+    modify-instance-attribute:
+        OutputField: Output
+        Required:
+            - instance-id
+        Args:
+            - account-id
+            - attribute
+            - block-device-mappings
+            - cli-input-json
+            - disable-api-termination
+            - dry-run
+            - ebs-optimized
+            - ena-support
+            - generate-cli-skeleton
+            - groups
+            - instance-initiated-shutdown-behavior
+            - instance-type
+            - kernel
+            - no-disable-api-termination
+            - no-dry-run
+            - no-ebs-optimized
+            - no-ena-support
+            - no-source-dest-check
+            - ramdisk
+            - source-dest-check
+            - sriov-net-support
+            - user-data
+            - value
+    modify-instance-capacity-reservation-attributes:
+        OutputField: Output
+        Required:
+            - capacity-reservation-specification
+            - instance-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    modify-instance-credit-specification:
+        OutputField: Output
+        Required:
+            - instance-credit-specifications
+        Args:
+            - account-id
+            - cli-input-json
+            - client-token
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    modify-instance-event-start-time:
+        OutputField: Output
+        Required:
+            - instance-event-id
+            - instance-id
+            - not-before
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    modify-instance-event-window:
+        OutputField: Output
+        Required:
+            - instance-event-window-id
+        Args:
+            - cli-input-json
+            - cron-expression
+            - dry-run
+            - generate-cli-skeleton
+            - name
+            - no-dry-run
+            - time-ranges
+    modify-instance-metadata-options:
+        OutputField: Output
+        Required: []
+        Args: []
+    modify-instance-placement:
+        OutputField: Output
+        Required:
+            - instance-id
+        Args:
+            - account-id
+            - affinity
+            - cli-input-json
+            - generate-cli-skeleton
+            - group-name
+            - host-id
+            - host-resource-group-arn
+            - partition-number
+            - tenancy
+    modify-instance-state:
+        OutputField: Output
+        Required:
+            - instance-id
+            - state
+        Args:
+            - cli-input-json
+            - generate-cli-skeleton
+    modify-launch-template:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - client-token
+            - default-version
+            - dry-run
+            - generate-cli-skeleton
+            - launch-template-id
+            - launch-template-name
+            - no-dry-run
+    modify-managed-prefix-list:
+        OutputField: Output
+        Required:
+            - prefix-list-id
+        Args:
+            - account-id
+            - add-entries
+            - cli-input-json
+            - current-version
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - prefix-list-name
+            - remove-entries
+    modify-network-interface-attribute:
+        OutputField: Output
+        Required:
+            - network-interface-id
+        Args:
+            - account-id
+            - attachment
+            - cli-input-json
+            - description
+            - dry-run
+            - generate-cli-skeleton
+            - groups
+            - no-dry-run
+            - no-source-dest-check
+            - source-dest-check
+    modify-notification-attributes:
+        OutputField: Output
+        Required:
+            - attributes
+            - notification-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - message
+            - no-dry-run
+            - severity
+            - type
+    modify-reserved-instances:
+        OutputField: Output
+        Required:
+            - reserved-instances-ids
+            - target-configurations
+        Args:
+            - account-id
+            - cli-input-json
+            - client-token
+            - generate-cli-skeleton
+    modify-security-group-rules:
+        OutputField: Output
+        Required:
+            - group-id
+            - security-group-rules
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    modify-snapshot-attribute:
+        OutputField: Output
+        Required:
+            - snapshot-id
+        Args:
+            - account-id
+            - attribute
+            - cli-input-json
+            - create-volume-permission
+            - dry-run
+            - generate-cli-skeleton
+            - group-names
+            - no-dry-run
+            - operation-type
+            - user-ids
+    modify-spot-fleet-request:
+        OutputField: Output
+        Required:
+            - spot-fleet-request-id
+        Args:
+            - account-id
+            - cli-input-json
+            - context
+            - excess-capacity-termination-policy
+            - generate-cli-skeleton
+            - launch-template-configs
+            - on-demand-target-capacity
+            - target-capacity
+    modify-subnet-attribute:
+        OutputField: Output
+        Required:
+            - subnet-id
+        Args:
+            - account-id
+            - assign-ipv6-address-on-creation
+            - cli-input-json
+            - customer-owned-ipv4-pool
+            - generate-cli-skeleton
+            - map-customer-owned-ip-on-launch
+            - map-public-ip-on-launch
+            - no-assign-ipv6-address-on-creation
+            - no-map-customer-owned-ip-on-launch
+            - no-map-public-ip-on-launch
+    modify-traffic-mirror-filter-network-services:
+        OutputField: Output
+        Required:
+            - traffic-mirror-filter-id
+        Args:
+            - account-id
+            - add-network-services
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - remove-network-services
+    modify-traffic-mirror-filter-rule:
+        OutputField: Output
+        Required:
+            - traffic-mirror-filter-rule-id
+        Args:
+            - account-id
+            - cli-input-json
+            - description
+            - destination-cidr-block
+            - destination-port-range
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - protocol
+            - remove-fields
+            - rule-action
+            - rule-number
+            - source-cidr-block
+            - source-port-range
+            - traffic-direction
+    modify-traffic-mirror-session:
+        OutputField: Output
+        Required:
+            - traffic-mirror-session-id
+        Args:
+            - account-id
+            - cli-input-json
+            - description
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - packet-length
+            - remove-fields
+            - session-number
+            - traffic-mirror-filter-id
+            - traffic-mirror-target-id
+            - virtual-network-id
+    modify-transit-gateway:
+        OutputField: Output
+        Required:
+            - transit-gateway-id
+        Args:
+            - cli-input-json
+            - description
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - options
+    modify-transit-gateway-prefix-list-reference:
+        OutputField: Output
+        Required:
+            - prefix-list-id
+            - transit-gateway-route-table-id
+        Args:
+            - blackhole
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-blackhole
+            - no-dry-run
+            - transit-gateway-attachment-id
+    modify-transit-gateway-vpc-attachment:
+        OutputField: Output
+        Required:
+            - transit-gateway-attachment-id
+        Args:
+            - account-id
+            - add-subnet-ids
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - options
+            - remove-subnet-ids
+    modify-volume:
+        OutputField: Output
+        Required:
+            - volume-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - iops
+            - multi-attach-enabled
+            - no-dry-run
+            - no-multi-attach-enabled
+            - size
+            - throughput
+            - volume-type
+    modify-volume-attribute:
+        OutputField: Output
+        Required:
+            - volume-id
+        Args:
+            - account-id
+            - auto-enable-io
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-auto-enable-io
+            - no-dry-run
+    modify-vpc-attribute:
+        OutputField: Output
+        Required:
+            - vpc-id
+        Args:
+            - account-id
+            - cli-input-json
+            - enable-dns-hostnames
+            - enable-dns-support
+            - generate-cli-skeleton
+            - no-enable-dns-hostnames
+            - no-enable-dns-support
+    modify-vpc-endpoint:
+        OutputField: Output
+        Required:
+            - vpc-endpoint-id
+        Args:
+            - account-id
+            - add-route-table-ids
+            - add-security-group-ids
+            - add-subnet-ids
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - no-private-dns-enabled
+            - no-reset-policy
+            - policy-document
+            - private-dns-enabled
+            - remove-route-table-ids
+            - remove-security-group-ids
+            - remove-subnet-ids
+            - reset-policy
+    modify-vpc-endpoint-connection-notification:
+        OutputField: Output
+        Required:
+            - connection-notification-id
+        Args:
+            - account-id
+            - cli-input-json
+            - connection-events
+            - connection-notification-arn
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    modify-vpc-endpoint-service-configuration:
+        OutputField: Output
+        Required:
+            - service-id
+        Args:
+            - acceptance-required
+            - account-id
+            - add-gateway-load-balancer-arns
+            - add-network-load-balancer-arns
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-acceptance-required
+            - no-dry-run
+            - no-remove-private-dns-name
+            - private-dns-name
+            - remove-gateway-load-balancer-arns
+            - remove-network-load-balancer-arns
+            - remove-private-dns-name
+    modify-vpc-endpoint-service-permissions:
+        OutputField: Output
+        Required:
+            - service-id
+        Args:
+            - account-id
+            - add-allowed-principals
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - remove-allowed-principals
+    modify-vpc-peering-connection-options:
+        OutputField: Output
+        Required: []
+        Args: []
+    modify-vpc-tenancy:
+        OutputField: Output
+        Required:
+            - instance-tenancy
+            - vpc-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    modify-vpn-connection:
+        OutputField: Output
+        Required:
+            - vpn-connection-id
+        Args:
+            - account-id
+            - cli-input-json
+            - customer-gateway-id
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - transit-gateway-id
+            - vpn-gateway-id
+    modify-vpn-connection-options:
+        OutputField: Output
+        Required: []
+        Args: []
+    modify-vpn-tunnel-certificate:
+        OutputField: Output
+        Required:
+            - vpn-connection-id
+            - vpn-tunnel-outside-ip-address
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    modify-vpn-tunnel-options:
+        OutputField: Output
+        Required: []
+        Args: []
+    monitor-instances:
+        OutputField: Output
+        Required:
+            - instance-ids
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    move-address-to-vpc:
+        OutputField: Output
+        Required:
+            - public-ip
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    provision-byoip-cidr:
+        OutputField: Output
+        Required:
+            - cidr
+        Args:
+            - cidr-authorization-context
+            - cli-input-json
+            - description
+            - dry-run
+            - generate-cli-skeleton
+            - multi-region
+            - no-dry-run
+            - no-multi-region
+            - no-publicly-advertisable
+            - pool-tag-specifications
+            - publicly-advertisable
+    purchase-host-reservation:
+        OutputField: Output
+        Required:
+            - host-id-set
+            - offering-id
+        Args:
+            - cli-input-json
+            - client-token
+            - currency-code
+            - generate-cli-skeleton
+            - limit-price
+            - tag-specifications
+    purchase-reserved-instances-offering:
+        OutputField: Output
+        Required:
+            - instance-count
+            - reserved-instances-offering-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - limit-price
+            - no-dry-run
+            - purchase-time
+    purchase-scheduled-instances:
+        OutputField: Output
+        Required:
+            - purchase-requests
+        Args:
+            - cli-input-json
+            - client-token
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    reboot-instances:
+        OutputField: Output
+        Required:
+            - instance-ids
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    reboot-nat-gateways:
+        OutputField: Output
+        Required:
+            - nat-gateway-ids
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    register-image:
+        OutputField: Output
+        Required:
+            - name
+        Args:
+            - account-id
+            - architecture
+            - billing-products
+            - block-device-mappings
+            - boot-mode
+            - cli-input-json
+            - description
+            - dry-run
+            - ena-support
+            - generate-cli-skeleton
+            - image-location
+            - kernel-id
+            - no-dry-run
+            - no-ena-support
+            - ramdisk-id
+            - root-device-name
+            - sriov-net-support
+            - virtualization-type
+    register-instance-event-notification-attributes:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - instance-tag-attribute
+            - no-dry-run
+    register-transit-gateway-multicast-group-members:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - group-ip-address
+            - network-interface-ids
+            - no-dry-run
+            - transit-gateway-multicast-domain-id
+    register-transit-gateway-multicast-group-sources:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - group-ip-address
+            - network-interface-ids
+            - no-dry-run
+            - transit-gateway-multicast-domain-id
+    reject-transit-gateway-multicast-domain-associations:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - subnet-ids
+            - transit-gateway-attachment-id
+            - transit-gateway-multicast-domain-id
+    reject-transit-gateway-peering-attachment:
+        OutputField: Output
+        Required:
+            - transit-gateway-attachment-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    reject-transit-gateway-vpc-attachment:
+        OutputField: Output
+        Required:
+            - transit-gateway-attachment-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    reject-vpc-endpoint-connections:
+        OutputField: Output
+        Required:
+            - service-id
+            - vpc-endpoint-ids
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    reject-vpc-peering-connection:
+        OutputField: Output
+        Required:
+            - vpc-peering-connection-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    release-address:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - allocation-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - network-border-group
+            - no-dry-run
+            - public-ip
+    release-hosts:
+        OutputField: Output
+        Required:
+            - host-ids
+        Args:
+            - account-id
+            - cli-input-json
+            - generate-cli-skeleton
+    replace-iam-instance-profile-association:
+        OutputField: Output
+        Required:
+            - association-id
+            - iam-instance-profile
+        Args:
+            - account-id
+            - cli-input-json
+            - generate-cli-skeleton
+    replace-nat-gateways:
+        OutputField: Output
+        Required:
+            - nat-gateway-ids
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    replace-network-acl-association:
+        OutputField: Output
+        Required:
+            - association-id
+            - network-acl-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    replace-network-acl-entry:
+        OutputField: Output
+        Required:
+            - egress
+            - ingress
+            - network-acl-id
+            - protocol
+            - rule-action
+            - rule-number
+        Args:
+            - account-id
+            - cidr-block
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - icmp-type-code
+            - ipv6-cidr-block
+            - no-dry-run
+            - port-range
+    replace-route:
+        OutputField: Output
+        Required:
+            - route-table-id
+        Args:
+            - account-id
+            - carrier-gateway-id
+            - cli-input-json
+            - destination-cidr-block
+            - destination-ipv6-cidr-block
+            - destination-prefix-list-id
+            - dry-run
+            - egress-only-internet-gateway-id
+            - gateway-id
+            - generate-cli-skeleton
+            - instance-id
+            - local-gateway-id
+            - local-target
+            - nat-gateway-id
+            - network-interface-id
+            - no-dry-run
+            - no-local-target
+            - transit-gateway-id
+            - vpc-endpoint-id
+            - vpc-peering-connection-id
+    replace-route-table-association:
+        OutputField: Output
+        Required:
+            - association-id
+            - route-table-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    replace-transit-gateway-route:
+        OutputField: Output
+        Required:
+            - destination-cidr-block
+            - transit-gateway-route-table-id
+        Args:
+            - account-id
+            - blackhole
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-blackhole
+            - no-dry-run
+            - transit-gateway-attachment-id
+    report-instance-status:
+        OutputField: Output
+        Required:
+            - instances
+            - reason-codes
+            - status
+        Args:
+            - account-id
+            - cli-input-json
+            - description
+            - dry-run
+            - end-time
+            - generate-cli-skeleton
+            - no-dry-run
+            - start-time
+    request-spot-fleet:
+        OutputField: Output
+        Required:
+            - spot-fleet-request-config
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    request-spot-instances:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - availability-zone-group
+            - block-duration-minutes
+            - cli-input-json
+            - client-token
+            - dry-run
+            - generate-cli-skeleton
+            - instance-count
+            - instance-interruption-behavior
+            - launch-group
+            - launch-specification
+            - no-dry-run
+            - spot-price
+            - tag-specifications
+            - type
+            - valid-from
+            - valid-until
+    reset-address-attribute:
+        OutputField: Output
+        Required:
+            - allocation-id
+            - attribute
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    reset-ebs-default-kms-key-id:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    reset-fpga-image-attribute:
+        OutputField: Output
+        Required:
+            - fpga-image-id
+        Args:
+            - account-id
+            - attribute
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    reset-image-attribute:
+        OutputField: Output
+        Required:
+            - attribute
+            - image-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    reset-instance-attribute:
+        OutputField: Output
+        Required:
+            - attribute
+            - instance-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    reset-network-interface-attribute:
+        OutputField: Output
+        Required:
+            - network-interface-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - source-dest-check
+    reset-snapshot-attribute:
+        OutputField: Output
+        Required:
+            - attribute
+            - snapshot-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    restore-address-to-classic:
+        OutputField: Output
+        Required:
+            - public-ip
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    restore-managed-prefix-list-version:
+        OutputField: Output
+        Required:
+            - current-version
+            - prefix-list-id
+            - previous-version
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    revoke-client-vpn-ingress:
+        OutputField: Output
+        Required:
+            - client-vpn-endpoint-id
+            - target-network-cidr
+        Args:
+            - access-group-id
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - no-revoke-all-groups
+            - revoke-all-groups
+    revoke-security-group-egress:
+        OutputField: Output
+        Required:
+            - group-id
+        Args:
+            - account-id
+            - cidr
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - group-owner
+            - ip-permissions
+            - no-dry-run
+            - port
+            - protocol
+            - security-group-rule-ids
+            - source-group
+    revoke-security-group-ingress:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cidr
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - group-id
+            - group-name
+            - group-owner
+            - ip-permissions
+            - no-dry-run
+            - port
+            - protocol
+            - security-group-rule-ids
+            - source-group
+    run-instances:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - additional-info
+            - associate-public-ip-address
+            - block-device-mappings
+            - capacity-reservation-specification
+            - cli-input-json
+            - client-token
+            - count
+            - cpu-options
+            - credit-specification
+            - disable-api-termination
+            - dry-run
+            - ebs-optimized
+            - elastic-gpu-specification
+            - elastic-inference-accelerators
+            - enable-api-termination
+            - enclave-options
+            - generate-cli-skeleton
+            - hibernation-options
+            - iam-instance-profile
+            - image-id
+            - instance-initiated-shutdown-behavior
+            - instance-market-options
+            - instance-type
+            - ipv6-address-count
+            - ipv6-addresses
+            - kernel-id
+            - key-name
+            - launch-template
+            - license-specifications
+            - metadata-options
+            - monitoring
+            - network-interfaces
+            - no-associate-public-ip-address
+            - no-dry-run
+            - no-ebs-optimized
+            - placement
+            - private-ip-address
+            - ramdisk-id
+            - secondary-private-ip-address-count
+            - secondary-private-ip-addresses
+            - security-group-ids
+            - security-groups
+            - subnet-id
+            - tag-specifications
+            - user-data
+    run-scheduled-instances:
+        OutputField: Output
+        Required:
+            - launch-specification
+            - scheduled-instance-id
+        Args:
+            - account-id
+            - cli-input-json
+            - client-token
+            - dry-run
+            - generate-cli-skeleton
+            - instance-count
+            - no-dry-run
+    search-local-gateway-routes:
+        OutputField: Output
+        Required:
+            - filters
+            - local-gateway-route-table-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+    search-transit-gateway-multicast-groups:
+        OutputField: Output
+        Required: []
+        Args:
+            - cli-input-json
+            - dry-run
+            - filters
+            - generate-cli-skeleton
+            - max-results
+            - next-token
+            - no-dry-run
+            - transit-gateway-multicast-domain-id
+    search-transit-gateway-routes:
+        OutputField: Output
+        Required:
+            - filters
+            - transit-gateway-route-table-id
+        Args:
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - max-results
+            - no-dry-run
+    send-diagnostic-interrupt:
+        OutputField: Output
+        Required:
+            - instance-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    show-admin-vpc-cmds:
+        OutputField: Result
+        Required: []
+        Args: []
+    show-ec2-cmds:
+        OutputField: Result
+        Required: []
+        Args: []
+    start-instances:
+        OutputField: Output
+        Required:
+            - instance-ids
+        Args:
+            - account-id
+            - additional-info
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    start-network-insights-analysis:
+        OutputField: Output
+        Required:
+            - network-insights-path-id
+        Args:
+            - cli-input-json
+            - client-token
+            - dry-run
+            - filter-in-arns
+            - generate-cli-skeleton
+            - no-dry-run
+            - tag-specifications
+    start-vpc-endpoint-service-private-dns-verification:
+        OutputField: Output
+        Required:
+            - service-id
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    stop-instances:
+        OutputField: Output
+        Required:
+            - instance-ids
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - force
+            - generate-cli-skeleton
+            - hibernate
+            - no-dry-run
+            - no-force
+            - no-hibernate
+    terminate-client-vpn-connections:
+        OutputField: Output
+        Required:
+            - client-vpn-endpoint-id
+        Args:
+            - account-id
+            - cli-input-json
+            - connection-id
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+            - username
+    terminate-instances:
+        OutputField: Output
+        Required:
+            - instance-ids
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    unassign-ipv6-addresses:
+        OutputField: Output
+        Required:
+            - network-interface-id
+        Args:
+            - account-id
+            - cli-input-json
+            - generate-cli-skeleton
+            - ipv6-addresses
+            - ipv6-prefixes
+    unassign-private-ip-addresses:
+        OutputField: Output
+        Required:
+            - network-interface-id
+        Args:
+            - account-id
+            - cli-input-json
+            - generate-cli-skeleton
+            - ipv4-prefixes
+            - private-ip-addresses
+    unmonitor-instances:
+        OutputField: Output
+        Required:
+            - instance-ids
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run
+    update-security-group-rule-descriptions-egress:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - group-id
+            - group-name
+            - ip-permissions
+            - no-dry-run
+            - security-group-rule-descriptions
+    update-security-group-rule-descriptions-ingress:
+        OutputField: Output
+        Required: []
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - group-id
+            - group-name
+            - ip-permissions
+            - no-dry-run
+            - security-group-rule-descriptions
+    wait:
+        OutputField: Output
+        Required: []
+        Args: []
+    withdraw-byoip-cidr:
+        OutputField: Output
+        Required:
+            - cidr
+        Args:
+            - account-id
+            - cli-input-json
+            - dry-run
+            - generate-cli-skeleton
+            - no-dry-run

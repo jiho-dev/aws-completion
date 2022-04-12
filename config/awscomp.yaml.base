@@ -1,0 +1,15 @@
+Version: "1"
+ApiFilter:
+ApiOptions:
+    show-ec2-cmds:
+        OutputField: Result
+        Required: []
+        Args:
+    show-admin-vpc-cmds:
+        OutputField: Result
+        Required: []
+        Args:
+    generate-ec2-cmds:
+        OutputField: Result
+        Required: []
+        Args:

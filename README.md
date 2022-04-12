@@ -5,43 +5,26 @@ aws-completion is a wrapper allowing shell completion by [TAB]
 
 # Install
 
-copy `bin/$(OS)/awsc` to `$HOME/bin/`  
-copy `config/awsc.yaml` to `$HOME/.aws/`  
+copy `bin/$(OS)/awscomp` to `$HOME/bin/`  
+copy `config/awscomp.yaml` to `$HOME/.aws/`  
 
-If you want to add more aws commands under completion, add commands in `ApiPrefixFilter` section.  
+If you want to update aws commands for completion , run generate-ec2-cmds
 And run below:   
 
-`$ awsc generate-sub-cmds --profile <your_profile>`
-
-Item starts the prefix of aws command  
-## Default Prefix Filters 
-```
-ApiPrefixFilter:
-    - describe-dhcp
-    - describe-comp
-    - describe-flow
-    - describe-host
-    - describe-i
-    - describe-k
-    - describe-n
-    - describe-network
-    - describe-p
-    - describe-route
-    - describe-secu
-    - describe-sub
-    - describe-tags
-    - describe-v
-    - get-console
-```
+`$ awscomp generate ec2 cmds --profile <your_admin_profile>`
 
 # Completion  
 
+$ awscomp [TAB][TAB]
+
 ## bash  
-`$ source <(~/bin/awsc completion bash)` when shell starts  
+add the line in .bashrc  
+`complete -C ~/bin/awscomp awscomp`
 
 ## zsh
-`$ ./awsc completion zsh > "${fpath[1]}/_awsc"`  
 
-or 
+add the line in .zshrc   
 
-`make zsh`  
+`eval "$(awscomp completion-zsh)"`  
+
+

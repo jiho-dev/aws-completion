@@ -1,11 +1,13 @@
 package config
 
 import (
+	//"flag"
 	"fmt"
 	"io/ioutil"
 	"path/filepath"
 	"sort"
 
+	flag "github.com/spf13/pflag"
 	"gopkg.in/yaml.v3"
 )
 
@@ -20,12 +22,24 @@ type ApiOption struct {
 }
 
 type AwscConfig struct {
-	Version         string   `yaml:"Version"`
-	ApiPrefixFilter []string `yaml:"ApiPrefixFilter"`
-	// 1st key: first api, 2nd key: second api, data: rest part of full api
-	ApiPrefix map[string]map[string][]string `yaml:"ApiPrefix"`
+	Version   string   `yaml:"Version"`
+	ApiFilter []string `yaml:"ApiFilter"`
 	// key: full-api, value: api-option
 	ApiOptions map[string]ApiOption `yaml:"ApiOptions"`
+}
+
+func (ao *ApiOption) GetFlags(cmdName string) *flag.FlagSet {
+	flag := flag.NewFlagSet(cmdName, flag.ExitOnError)
+
+	for _, c := range ao.Required {
+		flag.String(c, "", c)
+	}
+
+	for _, c := range ao.Args {
+		flag.String(c, "", c)
+	}
+
+	return flag
 }
 
 func ParseConfig(fileName string) (*AwscConfig, error) {
@@ -60,30 +74,34 @@ func YamlTest() {
 	c := AwscConfig{
 		Version: "1",
 
-		ApiPrefixFilter: []string{
-			"describe-network",
-			"describe-no",
+		ApiFilter: []string{
+			/*
+				"describe-network",
+				"describe-no",
+			*/
 		},
 
-		ApiPrefix: map[string]map[string][]string{
-			"describe": {
-				"network": []string{"acls", "interfaces"},
-				"volumes": []string{API_TERMINATED, "modifications"},
+		/*
+			ApiPrefix: map[string]map[string][]string{
+				"describe": {
+					"network": []string{"acls", "interfaces"},
+					"volumes": []string{API_TERMINATED, "modifications"},
+				},
+				"import": {
+					"image":    []string{API_TERMINATED},
+					"key":      []string{"pair"},
+					"snapshot": []string{API_TERMINATED},
+				},
+				"modify": {
+					"hosts":    []string{API_TERMINATED},
+					"instance": []string{"attribute", "capacity-reservation-attributes", "event-window"},
+					"snapshot": []string{API_TERMINATED},
+				},
+				"wait": {
+					API_TERMINATED: []string{},
+				},
 			},
-			"import": {
-				"image":    []string{API_TERMINATED},
-				"key":      []string{"pair"},
-				"snapshot": []string{API_TERMINATED},
-			},
-			"modify": {
-				"hosts":    []string{API_TERMINATED},
-				"instance": []string{"attribute", "capacity-reservation-attributes", "event-window"},
-				"snapshot": []string{API_TERMINATED},
-			},
-			"wait": {
-				API_TERMINATED: []string{},
-			},
-		},
+		*/
 
 		ApiOptions: map[string]ApiOption{
 			"describe-network-interfaces": {
@@ -98,7 +116,7 @@ func YamlTest() {
 		},
 	}
 
-	sort.Strings(c.ApiPrefixFilter)
+	sort.Strings(c.ApiFilter)
 
 	yamlData, err := yaml.Marshal(&c)
 
