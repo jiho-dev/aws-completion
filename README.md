@@ -8,7 +8,7 @@ aws-completion is a wrapper allowing shell completion by [TAB]
 copy `bin/$(OS)/awscomp` to `$HOME/bin/`  
 copy `config/awscomp.yaml` to `$HOME/.aws/`  
 
-If you want to update aws commands under completion, run generate-ec2-cmds
+If you want to update aws commands for completion , run generate-ec2-cmds
 And run below:   
 
 `$ awscomp generate ec2 cmds --profile <your_admin_profile>`
@@ -22,16 +22,9 @@ add the line in .bashrc
 `complete -C ~/bin/awscomp awscomp`
 
 ## zsh
-`$ ./awsc completion zsh > "${fpath[1]}/_awsc"`  
 
-or 
+add the line in .zshrc   
 
-`make zsh`  
-
-copy awscomp.zsh in `~/.oh-my-zsh/functions/_awscomp`  
-
-add it in .zshrc   
-
-`eval "$(cat /Users/jiho.jung/.oh-my-zsh/functions/_awscomp)"`   
+`eval "$(awscomp completion-zsh)"`  
 
 
