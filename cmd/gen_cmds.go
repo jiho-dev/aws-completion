@@ -144,7 +144,7 @@ func generateApiParameters(apiOptions map[string]config.ApiOption, allApis []str
 		var opt *config.ApiOption
 
 		if _, ok := AdminVpcCmds[api]; ok {
-			//opt = generateAdminVpcParameters(api, flags)
+			opt = generateAdminVpcParameters(api, flags)
 		} else {
 			opt = generateEc2ApiParameters(api)
 		}
