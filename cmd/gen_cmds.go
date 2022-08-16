@@ -217,8 +217,10 @@ func generateEc2ApiParameters(api string) *config.ApiOption {
 
 				opt = strings.TrimLeft(opt, "--")
 				if required {
-					newOpts.Required = append(newOpts.Required, opt)
-				} else {
+					if !Contains(newOpts.Required, opt) {
+						newOpts.Required = append(newOpts.Required, opt)
+					}
+				} else if !Contains(newOpts.Args, opt) {
 					newOpts.Args = append(newOpts.Args, opt)
 				}
 			}
@@ -292,7 +294,7 @@ func generateAdminVpcParameters(api string, flags *flag.FlagSet) *config.ApiOpti
 				if !Contains(newOpts.Required, key) {
 					newOpts.Required = append(newOpts.Required, key)
 				}
-			} else if !Contains(newOpts.Required, key) {
+			} else if !Contains(newOpts.Args, key) {
 				newOpts.Args = append(newOpts.Args, key)
 			}
 		}

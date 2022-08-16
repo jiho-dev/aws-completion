@@ -5,7 +5,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - reserved-instance-ids
-            - reserved-instance-ids
         Args:
             - account-id
             - cli-input-json
@@ -28,7 +27,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - transit-gateway-attachment-id
-            - transit-gateway-attachment-id
         Args:
             - account-id
             - cli-input-json
@@ -38,7 +36,6 @@ ApiOptions:
     accept-transit-gateway-vpc-attachment:
         OutputField: Output
         Required:
-            - transit-gateway-attachment-id
             - transit-gateway-attachment-id
         Args:
             - account-id
@@ -50,8 +47,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - service-id
-            - service-id
-            - vpc-endpoint-ids
             - vpc-endpoint-ids
         Args:
             - account-id
@@ -83,7 +78,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - cidr
-            - cidr
         Args:
             - account-id
             - cli-input-json
@@ -109,8 +103,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - availability-zone
-            - availability-zone
-            - quantity
             - quantity
         Args:
             - account-id
@@ -131,10 +123,7 @@ ApiOptions:
         OutputField: Output
         Required:
             - client-vpn-endpoint-id
-            - client-vpn-endpoint-id
             - security-group-ids
-            - security-group-ids
-            - vpc-id
             - vpc-id
         Args:
             - cli-input-json
@@ -144,7 +133,6 @@ ApiOptions:
     assign-ipv6-addresses:
         OutputField: Output
         Required:
-            - network-interface-id
             - network-interface-id
         Args:
             - cli-input-json
@@ -156,7 +144,6 @@ ApiOptions:
     assign-private-ip-addresses:
         OutputField: Output
         Required:
-            - network-interface-id
             - network-interface-id
         Args:
             - account-id
@@ -188,8 +175,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - auto-scaling-group-name
-            - auto-scaling-group-name
-            - instance-id
             - instance-id
         Args:
             - account-id
@@ -199,8 +184,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - client-vpn-endpoint-id
-            - client-vpn-endpoint-id
-            - subnet-id
             - subnet-id
         Args:
             - account-id
@@ -227,8 +210,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - iam-instance-profile
-            - iam-instance-profile
-            - instance-id
             - instance-id
         Args:
             - account-id
@@ -238,8 +219,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - association-target
-            - association-target
-            - instance-event-window-id
             - instance-event-window-id
         Args:
             - cli-input-json
@@ -249,7 +228,6 @@ ApiOptions:
     associate-route-table:
         OutputField: Output
         Required:
-            - route-table-id
             - route-table-id
         Args:
             - account-id
@@ -263,8 +241,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - ipv6-cidr-block
-            - ipv6-cidr-block
-            - subnet-id
             - subnet-id
         Args:
             - account-id
@@ -286,8 +262,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - transit-gateway-attachment-id
-            - transit-gateway-attachment-id
-            - transit-gateway-route-table-id
             - transit-gateway-route-table-id
         Args:
             - account-id
@@ -299,8 +273,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - branch-interface-id
-            - branch-interface-id
-            - trunk-interface-id
             - trunk-interface-id
         Args:
             - cli-input-json
@@ -313,7 +285,6 @@ ApiOptions:
     associate-vpc-cidr-block:
         OutputField: Output
         Required:
-            - vpc-id
             - vpc-id
         Args:
             - account-id
@@ -329,10 +300,7 @@ ApiOptions:
         OutputField: Output
         Required:
             - groups
-            - groups
             - instance-id
-            - instance-id
-            - vpc-id
             - vpc-id
         Args:
             - account-id
@@ -344,8 +312,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - internet-gateway-id
-            - internet-gateway-id
-            - vpc-id
             - vpc-id
         Args:
             - account-id
@@ -357,10 +323,7 @@ ApiOptions:
         OutputField: Output
         Required:
             - device-index
-            - device-index
             - instance-id
-            - instance-id
-            - network-interface-id
             - network-interface-id
         Args:
             - account-id
@@ -373,10 +336,7 @@ ApiOptions:
         OutputField: Output
         Required:
             - device
-            - device
             - instance-id
-            - instance-id
-            - volume-id
             - volume-id
         Args:
             - account-id
@@ -388,8 +348,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - vpc-id
-            - vpc-id
-            - vpn-gateway-id
             - vpn-gateway-id
         Args:
             - account-id
@@ -401,8 +359,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - client-vpn-endpoint-id
-            - client-vpn-endpoint-id
-            - target-network-cidr
             - target-network-cidr
         Args:
             - access-group-id
@@ -418,7 +374,6 @@ ApiOptions:
     authorize-security-group-egress:
         OutputField: Output
         Required:
-            - group-id
             - group-id
         Args:
             - account-id
@@ -459,7 +414,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - instance-id
-            - instance-id
         Args:
             - account-id
             - bucket
@@ -476,7 +430,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - bundle-id
-            - bundle-id
         Args:
             - account-id
             - cli-input-json
@@ -486,7 +439,6 @@ ApiOptions:
     cancel-capacity-reservation:
         OutputField: Output
         Required:
-            - capacity-reservation-id
             - capacity-reservation-id
         Args:
             - account-id
@@ -498,7 +450,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - conversion-task-id
-            - conversion-task-id
         Args:
             - account-id
             - cli-input-json
@@ -509,7 +460,6 @@ ApiOptions:
     cancel-export-task:
         OutputField: Output
         Required:
-            - export-task-id
             - export-task-id
         Args:
             - account-id
@@ -530,7 +480,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - reserved-instances-listing-id
-            - reserved-instances-listing-id
         Args:
             - account-id
             - cli-input-json
@@ -539,10 +488,7 @@ ApiOptions:
         OutputField: Output
         Required:
             - no-terminate-instances
-            - no-terminate-instances
             - spot-fleet-request-ids
-            - spot-fleet-request-ids
-            - terminate-instances
             - terminate-instances
         Args:
             - account-id
@@ -554,7 +500,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - spot-instance-request-ids
-            - spot-instance-request-ids
         Args:
             - account-id
             - cli-input-json
@@ -565,8 +510,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - instance-id
-            - instance-id
-            - product-code
             - product-code
         Args:
             - account-id
@@ -578,8 +521,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - source-fpga-image-id
-            - source-fpga-image-id
-            - source-region
             - source-region
         Args:
             - account-id
@@ -594,10 +535,7 @@ ApiOptions:
         OutputField: Output
         Required:
             - name
-            - name
             - source-image-id
-            - source-image-id
-            - source-region
             - source-region
         Args:
             - account-id
@@ -615,8 +553,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - source-region
-            - source-region
-            - source-snapshot-id
             - source-snapshot-id
         Args:
             - account-id
@@ -636,10 +572,7 @@ ApiOptions:
         OutputField: Output
         Required:
             - instance-count
-            - instance-count
             - instance-platform
-            - instance-platform
-            - instance-type
             - instance-type
         Args:
             - account-id
@@ -664,7 +597,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - vpc-id
-            - vpc-id
         Args:
             - cli-input-json
             - client-token
@@ -676,12 +608,8 @@ ApiOptions:
         OutputField: Output
         Required:
             - authentication-options
-            - authentication-options
-            - client-cidr-block
             - client-cidr-block
             - connection-log-options
-            - connection-log-options
-            - server-certificate-arn
             - server-certificate-arn
         Args:
             - account-id
@@ -705,10 +633,7 @@ ApiOptions:
         OutputField: Output
         Required:
             - client-vpn-endpoint-id
-            - client-vpn-endpoint-id
             - destination-cidr-block
-            - destination-cidr-block
-            - target-vpc-subnet-id
             - target-vpc-subnet-id
         Args:
             - account-id
@@ -722,8 +647,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - bgp-asn
-            - bgp-asn
-            - type
             - type
         Args:
             - account-id
@@ -738,7 +661,6 @@ ApiOptions:
     create-default-subnet:
         OutputField: Output
         Required:
-            - availability-zone
             - availability-zone
         Args:
             - account-id
@@ -763,7 +685,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - vpc-id
-            - vpc-id
         Args:
             - account-id
             - cli-input-json
@@ -776,8 +697,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - launch-template-configs
-            - launch-template-configs
-            - target-capacity-specification
             - target-capacity-specification
         Args:
             - account-id
@@ -802,10 +721,7 @@ ApiOptions:
         OutputField: Output
         Required:
             - resource-ids
-            - resource-ids
             - resource-type
-            - resource-type
-            - traffic-type
             - traffic-type
         Args:
             - account-id
@@ -825,7 +741,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - input-storage-location
-            - input-storage-location
         Args:
             - account-id
             - cli-input-json
@@ -841,8 +756,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - instance-id
-            - instance-id
-            - name
             - name
         Args:
             - account-id
@@ -871,10 +784,7 @@ ApiOptions:
         OutputField: Output
         Required:
             - export-to-s3-task
-            - export-to-s3-task
             - instance-id
-            - instance-id
-            - target-environment
             - target-environment
         Args:
             - account-id
@@ -896,7 +806,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - key-name
-            - key-name
         Args:
             - account-id
             - cli-input-json
@@ -908,8 +817,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - launch-template-data
-            - launch-template-data
-            - launch-template-name
             - launch-template-name
         Args:
             - account-id
@@ -923,7 +830,6 @@ ApiOptions:
     create-launch-template-version:
         OutputField: Output
         Required:
-            - launch-template-data
             - launch-template-data
         Args:
             - account-id
@@ -940,10 +846,7 @@ ApiOptions:
         OutputField: Output
         Required:
             - destination-cidr-block
-            - destination-cidr-block
             - local-gateway-route-table-id
-            - local-gateway-route-table-id
-            - local-gateway-virtual-interface-group-id
             - local-gateway-virtual-interface-group-id
         Args:
             - account-id
@@ -955,8 +858,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - local-gateway-route-table-id
-            - local-gateway-route-table-id
-            - vpc-id
             - vpc-id
         Args:
             - account-id
@@ -969,10 +870,7 @@ ApiOptions:
         OutputField: Output
         Required:
             - address-family
-            - address-family
             - max-entries
-            - max-entries
-            - prefix-list-name
             - prefix-list-name
         Args:
             - account-id
@@ -986,7 +884,6 @@ ApiOptions:
     create-nat-gateway:
         OutputField: Output
         Required:
-            - subnet-id
             - subnet-id
         Args:
             - account-id
@@ -1002,7 +899,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - vpc-id
-            - vpc-id
         Args:
             - account-id
             - cli-input-json
@@ -1014,16 +910,10 @@ ApiOptions:
         OutputField: Output
         Required:
             - egress
-            - egress
-            - ingress
             - ingress
             - network-acl-id
-            - network-acl-id
-            - protocol
             - protocol
             - rule-action
-            - rule-action
-            - rule-number
             - rule-number
         Args:
             - account-id
@@ -1039,10 +929,7 @@ ApiOptions:
         OutputField: Output
         Required:
             - destination
-            - destination
             - protocol
-            - protocol
-            - source
             - source
         Args:
             - cli-input-json
@@ -1057,7 +944,6 @@ ApiOptions:
     create-network-interface:
         OutputField: Output
         Required:
-            - subnet-id
             - subnet-id
         Args:
             - account-id
@@ -1085,8 +971,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - network-interface-id
-            - network-interface-id
-            - permission
             - permission
         Args:
             - account-id
@@ -1100,10 +984,7 @@ ApiOptions:
         OutputField: Output
         Required:
             - message
-            - message
             - severity
-            - severity
-            - type
             - type
         Args:
             - account-id
@@ -1133,7 +1014,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - instance-id
-            - instance-id
         Args:
             - cli-input-json
             - client-token
@@ -1146,12 +1026,8 @@ ApiOptions:
         OutputField: Output
         Required:
             - client-token
-            - client-token
-            - instance-count
             - instance-count
             - price-schedules
-            - price-schedules
-            - reserved-instances-id
             - reserved-instances-id
         Args:
             - account-id
@@ -1161,8 +1037,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - bucket
-            - bucket
-            - object-key
             - object-key
         Args:
             - cli-input-json
@@ -1174,7 +1048,6 @@ ApiOptions:
     create-route:
         OutputField: Output
         Required:
-            - route-table-id
             - route-table-id
         Args:
             - account-id
@@ -1199,7 +1072,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - vpc-id
-            - vpc-id
         Args:
             - account-id
             - cli-input-json
@@ -1211,8 +1083,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - description
-            - description
-            - group-name
             - group-name
         Args:
             - account-id
@@ -1226,7 +1096,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - volume-id
-            - volume-id
         Args:
             - account-id
             - cli-input-json
@@ -1239,7 +1108,6 @@ ApiOptions:
     create-snapshots:
         OutputField: Output
         Required:
-            - instance-specification
             - instance-specification
         Args:
             - account-id
@@ -1255,7 +1123,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - bucket
-            - bucket
         Args:
             - account-id
             - cli-input-json
@@ -1267,8 +1134,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - bucket
-            - bucket
-            - image-id
             - image-id
         Args:
             - cli-input-json
@@ -1280,8 +1145,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - cidr-block
-            - cidr-block
-            - vpc-id
             - vpc-id
         Args:
             - account-id
@@ -1298,10 +1161,7 @@ ApiOptions:
         OutputField: Output
         Required:
             - cidr
-            - cidr
             - reservation-type
-            - reservation-type
-            - subnet-id
             - subnet-id
         Args:
             - cli-input-json
@@ -1314,8 +1174,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - resources
-            - resources
-            - tags
             - tags
         Args:
             - account-id
@@ -1339,16 +1197,10 @@ ApiOptions:
         OutputField: Output
         Required:
             - destination-cidr-block
-            - destination-cidr-block
-            - rule-action
             - rule-action
             - rule-number
-            - rule-number
-            - source-cidr-block
             - source-cidr-block
             - traffic-direction
-            - traffic-direction
-            - traffic-mirror-filter-id
             - traffic-mirror-filter-id
         Args:
             - account-id
@@ -1365,12 +1217,8 @@ ApiOptions:
         OutputField: Output
         Required:
             - network-interface-id
-            - network-interface-id
-            - session-number
             - session-number
             - traffic-mirror-filter-id
-            - traffic-mirror-filter-id
-            - traffic-mirror-target-id
             - traffic-mirror-target-id
         Args:
             - account-id
@@ -1413,8 +1261,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - options
-            - options
-            - transport-transit-gateway-attachment-id
             - transport-transit-gateway-attachment-id
         Args:
             - cli-input-json
@@ -1426,10 +1272,7 @@ ApiOptions:
         OutputField: Output
         Required:
             - inside-cidr-blocks
-            - inside-cidr-blocks
             - peer-address
-            - peer-address
-            - transit-gateway-attachment-id
             - transit-gateway-attachment-id
         Args:
             - bgp-options
@@ -1443,7 +1286,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - transit-gateway-id
-            - transit-gateway-id
         Args:
             - account-id
             - cli-input-json
@@ -1456,12 +1298,8 @@ ApiOptions:
         OutputField: Output
         Required:
             - peer-account-id
-            - peer-account-id
-            - peer-region
             - peer-region
             - peer-transit-gateway-id
-            - peer-transit-gateway-id
-            - transit-gateway-id
             - transit-gateway-id
         Args:
             - account-id
@@ -1474,8 +1312,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - prefix-list-id
-            - prefix-list-id
-            - transit-gateway-route-table-id
             - transit-gateway-route-table-id
         Args:
             - blackhole
@@ -1489,8 +1325,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - destination-cidr-block
-            - destination-cidr-block
-            - transit-gateway-route-table-id
             - transit-gateway-route-table-id
         Args:
             - account-id
@@ -1505,7 +1339,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - transit-gateway-id
-            - transit-gateway-id
         Args:
             - account-id
             - cli-input-json
@@ -1517,10 +1350,7 @@ ApiOptions:
         OutputField: Output
         Required:
             - subnet-ids
-            - subnet-ids
             - transit-gateway-id
-            - transit-gateway-id
-            - vpc-id
             - vpc-id
         Args:
             - account-id
@@ -1533,7 +1363,6 @@ ApiOptions:
     create-volume:
         OutputField: Output
         Required:
-            - availability-zone
             - availability-zone
         Args:
             - account-id
@@ -1558,7 +1387,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - cidr-block
-            - cidr-block
         Args:
             - account-id
             - amazon-provided-ipv6-cidr-block
@@ -1576,8 +1404,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - service-name
-            - service-name
-            - vpc-id
             - vpc-id
         Args:
             - account-id
@@ -1598,8 +1424,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - connection-events
-            - connection-events
-            - connection-notification-arn
             - connection-notification-arn
         Args:
             - account-id
@@ -1644,8 +1468,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - customer-gateway-id
-            - customer-gateway-id
-            - type
             - type
         Args:
             - account-id
@@ -1661,8 +1483,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - destination-cidr-block
-            - destination-cidr-block
-            - vpn-connection-id
             - vpn-connection-id
         Args:
             - account-id
@@ -1671,7 +1491,6 @@ ApiOptions:
     create-vpn-gateway:
         OutputField: Output
         Required:
-            - type
             - type
         Args:
             - account-id
@@ -1686,7 +1505,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - carrier-gateway-id
-            - carrier-gateway-id
         Args:
             - cli-input-json
             - dry-run
@@ -1695,7 +1513,6 @@ ApiOptions:
     delete-client-vpn-endpoint:
         OutputField: Output
         Required:
-            - client-vpn-endpoint-id
             - client-vpn-endpoint-id
         Args:
             - account-id
@@ -1707,8 +1524,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - client-vpn-endpoint-id
-            - client-vpn-endpoint-id
-            - destination-cidr-block
             - destination-cidr-block
         Args:
             - account-id
@@ -1721,7 +1536,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - compute-host-id
-            - compute-host-id
         Args:
             - cli-input-json
             - dry-run
@@ -1730,7 +1544,6 @@ ApiOptions:
     delete-customer-gateway:
         OutputField: Output
         Required:
-            - customer-gateway-id
             - customer-gateway-id
         Args:
             - account-id
@@ -1746,7 +1559,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - egress-only-internet-gateway-id
-            - egress-only-internet-gateway-id
         Args:
             - account-id
             - cli-input-json
@@ -1757,10 +1569,7 @@ ApiOptions:
         OutputField: Output
         Required:
             - fleet-ids
-            - fleet-ids
             - no-terminate-instances
-            - no-terminate-instances
-            - terminate-instances
             - terminate-instances
         Args:
             - account-id
@@ -1772,7 +1581,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - flow-log-ids
-            - flow-log-ids
         Args:
             - account-id
             - cli-input-json
@@ -1782,7 +1590,6 @@ ApiOptions:
     delete-fpga-image:
         OutputField: Output
         Required:
-            - fpga-image-id
             - fpga-image-id
         Args:
             - account-id
@@ -1794,7 +1601,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - instance-event-window-id
-            - instance-event-window-id
         Args:
             - cli-input-json
             - dry-run
@@ -1805,7 +1611,6 @@ ApiOptions:
     delete-internet-gateway:
         OutputField: Output
         Required:
-            - internet-gateway-id
             - internet-gateway-id
         Args:
             - account-id
@@ -1839,7 +1644,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - versions
-            - versions
         Args:
             - account-id
             - cli-input-json
@@ -1852,8 +1656,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - destination-cidr-block
-            - destination-cidr-block
-            - local-gateway-route-table-id
             - local-gateway-route-table-id
         Args:
             - account-id
@@ -1865,7 +1667,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - local-gateway-route-table-vpc-association-id
-            - local-gateway-route-table-vpc-association-id
         Args:
             - account-id
             - cli-input-json
@@ -1875,7 +1676,6 @@ ApiOptions:
     delete-managed-prefix-list:
         OutputField: Output
         Required:
-            - prefix-list-id
             - prefix-list-id
         Args:
             - account-id
@@ -1887,7 +1687,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - nat-gateway-id
-            - nat-gateway-id
         Args:
             - account-id
             - cli-input-json
@@ -1897,7 +1696,6 @@ ApiOptions:
     delete-network-acl:
         OutputField: Output
         Required:
-            - network-acl-id
             - network-acl-id
         Args:
             - account-id
@@ -1909,12 +1707,8 @@ ApiOptions:
         OutputField: Output
         Required:
             - egress
-            - egress
-            - ingress
             - ingress
             - network-acl-id
-            - network-acl-id
-            - rule-number
             - rule-number
         Args:
             - account-id
@@ -1926,7 +1720,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - network-insights-analysis-id
-            - network-insights-analysis-id
         Args:
             - cli-input-json
             - dry-run
@@ -1935,7 +1728,6 @@ ApiOptions:
     delete-network-insights-path:
         OutputField: Output
         Required:
-            - network-insights-path-id
             - network-insights-path-id
         Args:
             - cli-input-json
@@ -1946,7 +1738,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - network-interface-id
-            - network-interface-id
         Args:
             - account-id
             - cli-input-json
@@ -1956,7 +1747,6 @@ ApiOptions:
     delete-network-interface-permission:
         OutputField: Output
         Required:
-            - network-interface-permission-id
             - network-interface-permission-id
         Args:
             - account-id
@@ -1970,7 +1760,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - notification-ids
-            - notification-ids
         Args:
             - cli-input-json
             - dry-run
@@ -1979,7 +1768,6 @@ ApiOptions:
     delete-placement-group:
         OutputField: Output
         Required:
-            - group-name
             - group-name
         Args:
             - account-id
@@ -1996,7 +1784,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - reserved-instances-ids
-            - reserved-instances-ids
         Args:
             - account-id
             - cli-input-json
@@ -2006,7 +1793,6 @@ ApiOptions:
     delete-route:
         OutputField: Output
         Required:
-            - route-table-id
             - route-table-id
         Args:
             - account-id
@@ -2020,7 +1806,6 @@ ApiOptions:
     delete-route-table:
         OutputField: Output
         Required:
-            - route-table-id
             - route-table-id
         Args:
             - account-id
@@ -2043,7 +1828,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - snapshot-id
-            - snapshot-id
         Args:
             - account-id
             - cli-input-json
@@ -2063,7 +1847,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - subnet-id
-            - subnet-id
         Args:
             - account-id
             - cli-input-json
@@ -2074,7 +1857,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - subnet-cidr-reservation-id
-            - subnet-cidr-reservation-id
         Args:
             - cli-input-json
             - dry-run
@@ -2083,7 +1865,6 @@ ApiOptions:
     delete-tags:
         OutputField: Output
         Required:
-            - resources
             - resources
         Args:
             - account-id
@@ -2096,7 +1877,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - traffic-mirror-filter-id
-            - traffic-mirror-filter-id
         Args:
             - account-id
             - cli-input-json
@@ -2106,7 +1886,6 @@ ApiOptions:
     delete-traffic-mirror-filter-rule:
         OutputField: Output
         Required:
-            - traffic-mirror-filter-rule-id
             - traffic-mirror-filter-rule-id
         Args:
             - account-id
@@ -2118,7 +1897,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - traffic-mirror-session-id
-            - traffic-mirror-session-id
         Args:
             - account-id
             - cli-input-json
@@ -2128,7 +1906,6 @@ ApiOptions:
     delete-traffic-mirror-target:
         OutputField: Output
         Required:
-            - traffic-mirror-target-id
             - traffic-mirror-target-id
         Args:
             - account-id
@@ -2140,7 +1917,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - transit-gateway-id
-            - transit-gateway-id
         Args:
             - account-id
             - cli-input-json
@@ -2151,7 +1927,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - transit-gateway-attachment-id
-            - transit-gateway-attachment-id
         Args:
             - cli-input-json
             - dry-run
@@ -2161,7 +1936,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - transit-gateway-connect-peer-id
-            - transit-gateway-connect-peer-id
         Args:
             - cli-input-json
             - dry-run
@@ -2170,7 +1944,6 @@ ApiOptions:
     delete-transit-gateway-multicast-domain:
         OutputField: Output
         Required:
-            - transit-gateway-multicast-domain-id
             - transit-gateway-multicast-domain-id
         Args:
             - account-id
@@ -2182,7 +1955,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - transit-gateway-attachment-id
-            - transit-gateway-attachment-id
         Args:
             - account-id
             - cli-input-json
@@ -2193,8 +1965,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - prefix-list-id
-            - prefix-list-id
-            - transit-gateway-route-table-id
             - transit-gateway-route-table-id
         Args:
             - cli-input-json
@@ -2205,8 +1975,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - destination-cidr-block
-            - destination-cidr-block
-            - transit-gateway-route-table-id
             - transit-gateway-route-table-id
         Args:
             - account-id
@@ -2218,7 +1986,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - transit-gateway-route-table-id
-            - transit-gateway-route-table-id
         Args:
             - account-id
             - cli-input-json
@@ -2228,7 +1995,6 @@ ApiOptions:
     delete-transit-gateway-vpc-attachment:
         OutputField: Output
         Required:
-            - transit-gateway-attachment-id
             - transit-gateway-attachment-id
         Args:
             - account-id
@@ -2240,7 +2006,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - volume-id
-            - volume-id
         Args:
             - account-id
             - cli-input-json
@@ -2250,7 +2015,6 @@ ApiOptions:
     delete-vpc:
         OutputField: Output
         Required:
-            - vpc-id
             - vpc-id
         Args:
             - account-id
@@ -2262,7 +2026,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - connection-notification-ids
-            - connection-notification-ids
         Args:
             - account-id
             - cli-input-json
@@ -2272,7 +2035,6 @@ ApiOptions:
     delete-vpc-endpoint-service-configurations:
         OutputField: Output
         Required:
-            - service-ids
             - service-ids
         Args:
             - account-id
@@ -2284,7 +2046,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - vpc-endpoint-ids
-            - vpc-endpoint-ids
         Args:
             - account-id
             - cli-input-json
@@ -2294,7 +2055,6 @@ ApiOptions:
     delete-vpc-peering-connection:
         OutputField: Output
         Required:
-            - vpc-peering-connection-id
             - vpc-peering-connection-id
         Args:
             - account-id
@@ -2306,7 +2066,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - vpn-connection-id
-            - vpn-connection-id
         Args:
             - account-id
             - cli-input-json
@@ -2317,8 +2076,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - destination-cidr-block
-            - destination-cidr-block
-            - vpn-connection-id
             - vpn-connection-id
         Args:
             - account-id
@@ -2327,7 +2084,6 @@ ApiOptions:
     delete-vpn-gateway:
         OutputField: Output
         Required:
-            - vpn-gateway-id
             - vpn-gateway-id
         Args:
             - account-id
@@ -2339,7 +2095,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - cidr
-            - cidr
         Args:
             - account-id
             - cli-input-json
@@ -2349,7 +2104,6 @@ ApiOptions:
     deregister-image:
         OutputField: Output
         Required:
-            - image-id
             - image-id
         Args:
             - account-id
@@ -2441,7 +2195,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - instance-ids
-            - instance-ids
         Args:
             - cli-input-json
             - generate-cli-skeleton
@@ -2521,7 +2274,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - client-vpn-endpoint-id
-            - client-vpn-endpoint-id
         Args:
             - cli-input-json
             - dry-run
@@ -2534,7 +2286,6 @@ ApiOptions:
     describe-client-vpn-connections:
         OutputField: Output
         Required:
-            - client-vpn-endpoint-id
             - client-vpn-endpoint-id
         Args:
             - cli-input-json
@@ -2562,7 +2313,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - client-vpn-endpoint-id
-            - client-vpn-endpoint-id
         Args:
             - cli-input-json
             - dry-run
@@ -2575,7 +2325,6 @@ ApiOptions:
     describe-client-vpn-target-networks:
         OutputField: Output
         Required:
-            - client-vpn-endpoint-id
             - client-vpn-endpoint-id
         Args:
             - association-ids
@@ -2697,8 +2446,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - fleet-id
-            - fleet-id
-            - start-time
             - start-time
         Args:
             - cli-input-json
@@ -2711,7 +2458,6 @@ ApiOptions:
     describe-fleet-instances:
         OutputField: Output
         Required:
-            - fleet-id
             - fleet-id
         Args:
             - cli-input-json
@@ -2751,8 +2497,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - attribute
-            - attribute
-            - fpga-image-id
             - fpga-image-id
         Args:
             - cli-input-json
@@ -2830,7 +2574,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - principal-arn
-            - principal-arn
         Args:
             - cli-input-json
             - generate-cli-skeleton
@@ -2839,8 +2582,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - attribute
-            - attribute
-            - image-id
             - image-id
         Args:
             - cli-input-json
@@ -2892,8 +2633,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - attribute
-            - attribute
-            - instance-id
             - instance-id
         Args:
             - cli-input-json
@@ -2936,7 +2675,6 @@ ApiOptions:
     describe-instance-placements:
         OutputField: Output
         Required:
-            - instance-ids
             - instance-ids
         Args:
             - cli-input-json
@@ -3216,7 +2954,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - network-interface-id
-            - network-interface-id
         Args:
             - attribute
             - cli-input-json
@@ -3425,8 +3162,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - first-slot-start-time-range
-            - first-slot-start-time-range
-            - recurrence
             - recurrence
         Args:
             - cli-input-json
@@ -3456,7 +3191,6 @@ ApiOptions:
     describe-security-group-references:
         OutputField: Output
         Required:
-            - group-id
             - group-id
         Args:
             - cli-input-json
@@ -3502,8 +3236,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - attribute
-            - attribute
-            - snapshot-id
             - snapshot-id
         Args:
             - cli-input-json
@@ -3538,7 +3270,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - spot-fleet-request-id
-            - spot-fleet-request-id
         Args:
             - cli-input-json
             - dry-run
@@ -3551,8 +3282,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - spot-fleet-request-id
-            - spot-fleet-request-id
-            - start-time
             - start-time
         Args:
             - cli-input-json
@@ -3607,7 +3336,6 @@ ApiOptions:
     describe-stale-security-groups:
         OutputField: Output
         Required:
-            - vpc-id
             - vpc-id
         Args:
             - cli-input-json
@@ -3809,8 +3537,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - attribute
-            - attribute
-            - volume-id
             - volume-id
         Args:
             - cli-input-json
@@ -3860,8 +3586,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - attribute
-            - attribute
-            - vpc-id
             - vpc-id
         Args:
             - cli-input-json
@@ -3929,7 +3653,6 @@ ApiOptions:
     describe-vpc-endpoint-service-permissions:
         OutputField: Output
         Required:
-            - service-id
             - service-id
         Args:
             - cli-input-json
@@ -4016,8 +3739,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - instance-id
-            - instance-id
-            - vpc-id
             - vpc-id
         Args:
             - account-id
@@ -4029,8 +3750,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - internet-gateway-id
-            - internet-gateway-id
-            - vpc-id
             - vpc-id
         Args:
             - account-id
@@ -4042,7 +3761,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - attachment-id
-            - attachment-id
         Args:
             - cli-input-json
             - dry-run
@@ -4053,7 +3771,6 @@ ApiOptions:
     detach-volume:
         OutputField: Output
         Required:
-            - volume-id
             - volume-id
         Args:
             - account-id
@@ -4069,8 +3786,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - vpc-id
-            - vpc-id
-            - vpn-gateway-id
             - vpn-gateway-id
         Args:
             - account-id
@@ -4091,8 +3806,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - availability-zones
-            - availability-zones
-            - source-snapshot-ids
             - source-snapshot-ids
         Args:
             - account-id
@@ -4103,7 +3816,6 @@ ApiOptions:
     disable-image-deprecation:
         OutputField: Output
         Required:
-            - image-id
             - image-id
         Args:
             - cli-input-json
@@ -4128,8 +3840,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - transit-gateway-attachment-id
-            - transit-gateway-attachment-id
-            - transit-gateway-route-table-id
             - transit-gateway-route-table-id
         Args:
             - account-id
@@ -4141,8 +3851,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - gateway-id
-            - gateway-id
-            - route-table-id
             - route-table-id
         Args:
             - account-id
@@ -4153,7 +3861,6 @@ ApiOptions:
     disable-vpc-classic-link:
         OutputField: Output
         Required:
-            - vpc-id
             - vpc-id
         Args:
             - account-id
@@ -4184,7 +3891,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - instance-id
-            - instance-id
         Args:
             - account-id
             - cli-input-json
@@ -4193,8 +3899,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - association-id
-            - association-id
-            - client-vpn-endpoint-id
             - client-vpn-endpoint-id
         Args:
             - account-id
@@ -4216,7 +3920,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - association-id
-            - association-id
         Args:
             - account-id
             - cli-input-json
@@ -4225,8 +3928,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - association-target
-            - association-target
-            - instance-event-window-id
             - instance-event-window-id
         Args:
             - cli-input-json
@@ -4242,7 +3943,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - association-id
-            - association-id
         Args:
             - account-id
             - cli-input-json
@@ -4252,7 +3952,6 @@ ApiOptions:
     disassociate-subnet-cidr-block:
         OutputField: Output
         Required:
-            - association-id
             - association-id
         Args:
             - account-id
@@ -4274,8 +3973,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - transit-gateway-attachment-id
-            - transit-gateway-attachment-id
-            - transit-gateway-route-table-id
             - transit-gateway-route-table-id
         Args:
             - account-id
@@ -4287,7 +3984,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - association-id
-            - association-id
         Args:
             - cli-input-json
             - client-token
@@ -4297,7 +3993,6 @@ ApiOptions:
     disassociate-vpc-cidr-block:
         OutputField: Output
         Required:
-            - association-id
             - association-id
         Args:
             - account-id
@@ -4316,8 +4011,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - availability-zones
-            - availability-zones
-            - source-snapshot-ids
             - source-snapshot-ids
         Args:
             - account-id
@@ -4329,8 +4022,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - deprecate-at
-            - deprecate-at
-            - image-id
             - image-id
         Args:
             - cli-input-json
@@ -4355,8 +4046,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - transit-gateway-attachment-id
-            - transit-gateway-attachment-id
-            - transit-gateway-route-table-id
             - transit-gateway-route-table-id
         Args:
             - account-id
@@ -4368,8 +4057,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - gateway-id
-            - gateway-id
-            - route-table-id
             - route-table-id
         Args:
             - account-id
@@ -4381,7 +4068,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - volume-id
-            - volume-id
         Args:
             - account-id
             - cli-input-json
@@ -4391,7 +4077,6 @@ ApiOptions:
     enable-vpc-classic-link:
         OutputField: Output
         Required:
-            - vpc-id
             - vpc-id
         Args:
             - account-id
@@ -4411,7 +4096,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - client-vpn-endpoint-id
-            - client-vpn-endpoint-id
         Args:
             - account-id
             - cli-input-json
@@ -4421,7 +4105,6 @@ ApiOptions:
     export-client-vpn-client-configuration:
         OutputField: Output
         Required:
-            - client-vpn-endpoint-id
             - client-vpn-endpoint-id
         Args:
             - account-id
@@ -4433,10 +4116,7 @@ ApiOptions:
         OutputField: Output
         Required:
             - disk-image-format
-            - disk-image-format
             - image-id
-            - image-id
-            - s3-export-location
             - s3-export-location
         Args:
             - account-id
@@ -4452,8 +4132,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - s3-bucket
-            - s3-bucket
-            - transit-gateway-route-table-id
             - transit-gateway-route-table-id
         Args:
             - account-id
@@ -4479,7 +4157,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - pool-id
-            - pool-id
         Args:
             - cli-input-json
             - dry-run
@@ -4491,7 +4168,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - capacity-reservation-id
-            - capacity-reservation-id
         Args:
             - cli-input-json
             - dry-run
@@ -4502,7 +4178,6 @@ ApiOptions:
     get-coip-pool-usage:
         OutputField: Output
         Required:
-            - pool-id
             - pool-id
         Args:
             - cli-input-json
@@ -4516,7 +4191,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - instance-id
-            - instance-id
         Args:
             - cli-input-json
             - dry-run
@@ -4528,7 +4202,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - instance-id
-            - instance-id
         Args:
             - cli-input-json
             - dry-run
@@ -4539,7 +4212,6 @@ ApiOptions:
     get-default-credit-specification:
         OutputField: Output
         Required:
-            - instance-family
             - instance-family
         Args:
             - cli-input-json
@@ -4566,10 +4238,7 @@ ApiOptions:
         OutputField: Output
         Required:
             - config-delivery-s3-destination-arn
-            - config-delivery-s3-destination-arn
             - flow-log-id
-            - flow-log-id
-            - integrate-services
             - integrate-services
         Args:
             - cli-input-json
@@ -4579,7 +4248,6 @@ ApiOptions:
     get-groups-for-capacity-reservation:
         OutputField: Output
         Required:
-            - capacity-reservation-id
             - capacity-reservation-id
         Args:
             - cli-input-json
@@ -4592,8 +4260,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - host-id-set
-            - host-id-set
-            - offering-id
             - offering-id
         Args:
             - cli-input-json
@@ -4601,7 +4267,6 @@ ApiOptions:
     get-launch-template-data:
         OutputField: Output
         Required:
-            - instance-id
             - instance-id
         Args:
             - cli-input-json
@@ -4611,7 +4276,6 @@ ApiOptions:
     get-managed-prefix-list-associations:
         OutputField: Output
         Required:
-            - prefix-list-id
             - prefix-list-id
         Args:
             - cli-input-json
@@ -4623,7 +4287,6 @@ ApiOptions:
     get-managed-prefix-list-entries:
         OutputField: Output
         Required:
-            - prefix-list-id
             - prefix-list-id
         Args:
             - cli-input-json
@@ -4637,7 +4300,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - instance-id
-            - instance-id
         Args:
             - cli-input-json
             - dry-run
@@ -4647,7 +4309,6 @@ ApiOptions:
     get-reserved-instances-exchange-quote:
         OutputField: Output
         Required:
-            - reserved-instance-ids
             - reserved-instance-ids
         Args:
             - cli-input-json
@@ -4667,7 +4328,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - subnet-id
-            - subnet-id
         Args:
             - cli-input-json
             - dry-run
@@ -4679,7 +4339,6 @@ ApiOptions:
     get-transit-gateway-attachment-propagations:
         OutputField: Output
         Required:
-            - transit-gateway-attachment-id
             - transit-gateway-attachment-id
         Args:
             - cli-input-json
@@ -4706,7 +4365,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - transit-gateway-route-table-id
-            - transit-gateway-route-table-id
         Args:
             - cli-input-json
             - dry-run
@@ -4718,7 +4376,6 @@ ApiOptions:
     get-transit-gateway-route-table-associations:
         OutputField: Output
         Required:
-            - transit-gateway-route-table-id
             - transit-gateway-route-table-id
         Args:
             - cli-input-json
@@ -4732,7 +4389,6 @@ ApiOptions:
     get-transit-gateway-route-table-propagations:
         OutputField: Output
         Required:
-            - transit-gateway-route-table-id
             - transit-gateway-route-table-id
         Args:
             - cli-input-json
@@ -4751,8 +4407,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - certificate-revocation-list
-            - certificate-revocation-list
-            - client-vpn-endpoint-id
             - client-vpn-endpoint-id
         Args:
             - account-id
@@ -4787,8 +4441,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - key-name
-            - key-name
-            - public-key-material
             - public-key-material
         Args:
             - account-id
@@ -4885,7 +4537,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - allocation-id
-            - allocation-id
         Args:
             - cli-input-json
             - domain-name
@@ -4896,8 +4547,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - group-name
-            - group-name
-            - opt-in-status
             - opt-in-status
         Args:
             - account-id
@@ -4908,7 +4557,6 @@ ApiOptions:
     modify-capacity-reservation:
         OutputField: Output
         Required:
-            - capacity-reservation-id
             - capacity-reservation-id
         Args:
             - accept
@@ -4924,7 +4572,6 @@ ApiOptions:
     modify-client-vpn-endpoint:
         OutputField: Output
         Required:
-            - client-vpn-endpoint-id
             - client-vpn-endpoint-id
         Args:
             - account-id
@@ -4947,8 +4594,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - attribute
-            - attribute
-            - compute-host-id
             - compute-host-id
         Args:
             - account-id
@@ -4960,8 +4605,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - cpu-credits
-            - cpu-credits
-            - instance-family
             - instance-family
         Args:
             - account-id
@@ -4973,7 +4616,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - kms-key-id
-            - kms-key-id
         Args:
             - account-id
             - cli-input-json
@@ -4983,7 +4625,6 @@ ApiOptions:
     modify-fleet:
         OutputField: Output
         Required:
-            - fleet-id
             - fleet-id
         Args:
             - account-id
@@ -4998,7 +4639,6 @@ ApiOptions:
     modify-fpga-image-attribute:
         OutputField: Output
         Required:
-            - fpga-image-id
             - fpga-image-id
         Args:
             - account-id
@@ -5018,7 +4658,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - host-ids
-            - host-ids
         Args:
             - account-id
             - auto-placement
@@ -5031,10 +4670,7 @@ ApiOptions:
         OutputField: Output
         Required:
             - no-use-long-ids
-            - no-use-long-ids
             - resource
-            - resource
-            - use-long-ids
             - use-long-ids
         Args:
             - account-id
@@ -5044,12 +4680,8 @@ ApiOptions:
         OutputField: Output
         Required:
             - no-use-long-ids
-            - no-use-long-ids
-            - principal-arn
             - principal-arn
             - resource
-            - resource
-            - use-long-ids
             - use-long-ids
         Args:
             - account-id
@@ -5058,7 +4690,6 @@ ApiOptions:
     modify-image-attribute:
         OutputField: Output
         Required:
-            - image-id
             - image-id
         Args:
             - account-id
@@ -5077,7 +4708,6 @@ ApiOptions:
     modify-instance-attribute:
         OutputField: Output
         Required:
-            - instance-id
             - instance-id
         Args:
             - account-id
@@ -5107,8 +4737,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - capacity-reservation-specification
-            - capacity-reservation-specification
-            - instance-id
             - instance-id
         Args:
             - account-id
@@ -5119,7 +4747,6 @@ ApiOptions:
     modify-instance-credit-specification:
         OutputField: Output
         Required:
-            - instance-credit-specifications
             - instance-credit-specifications
         Args:
             - account-id
@@ -5132,10 +4759,7 @@ ApiOptions:
         OutputField: Output
         Required:
             - instance-event-id
-            - instance-event-id
             - instance-id
-            - instance-id
-            - not-before
             - not-before
         Args:
             - account-id
@@ -5146,7 +4770,6 @@ ApiOptions:
     modify-instance-event-window:
         OutputField: Output
         Required:
-            - instance-event-window-id
             - instance-event-window-id
         Args:
             - cli-input-json
@@ -5164,7 +4787,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - instance-id
-            - instance-id
         Args:
             - account-id
             - affinity
@@ -5179,8 +4801,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - instance-id
-            - instance-id
-            - state
             - state
         Args:
             - cli-input-json
@@ -5202,7 +4822,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - prefix-list-id
-            - prefix-list-id
         Args:
             - account-id
             - add-entries
@@ -5216,7 +4835,6 @@ ApiOptions:
     modify-network-interface-attribute:
         OutputField: Output
         Required:
-            - network-interface-id
             - network-interface-id
         Args:
             - account-id
@@ -5233,8 +4851,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - attributes
-            - attributes
-            - notification-id
             - notification-id
         Args:
             - account-id
@@ -5249,8 +4865,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - reserved-instances-ids
-            - reserved-instances-ids
-            - target-configurations
             - target-configurations
         Args:
             - account-id
@@ -5261,8 +4875,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - group-id
-            - group-id
-            - security-group-rules
             - security-group-rules
         Args:
             - cli-input-json
@@ -5272,7 +4884,6 @@ ApiOptions:
     modify-snapshot-attribute:
         OutputField: Output
         Required:
-            - snapshot-id
             - snapshot-id
         Args:
             - account-id
@@ -5289,7 +4900,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - spot-fleet-request-id
-            - spot-fleet-request-id
         Args:
             - account-id
             - cli-input-json
@@ -5302,7 +4912,6 @@ ApiOptions:
     modify-subnet-attribute:
         OutputField: Output
         Required:
-            - subnet-id
             - subnet-id
         Args:
             - account-id
@@ -5319,7 +4928,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - traffic-mirror-filter-id
-            - traffic-mirror-filter-id
         Args:
             - account-id
             - add-network-services
@@ -5331,7 +4939,6 @@ ApiOptions:
     modify-traffic-mirror-filter-rule:
         OutputField: Output
         Required:
-            - traffic-mirror-filter-rule-id
             - traffic-mirror-filter-rule-id
         Args:
             - account-id
@@ -5353,7 +4960,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - traffic-mirror-session-id
-            - traffic-mirror-session-id
         Args:
             - account-id
             - cli-input-json
@@ -5371,7 +4977,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - transit-gateway-id
-            - transit-gateway-id
         Args:
             - cli-input-json
             - description
@@ -5383,8 +4988,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - prefix-list-id
-            - prefix-list-id
-            - transit-gateway-route-table-id
             - transit-gateway-route-table-id
         Args:
             - blackhole
@@ -5398,7 +5001,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - transit-gateway-attachment-id
-            - transit-gateway-attachment-id
         Args:
             - account-id
             - add-subnet-ids
@@ -5411,7 +5013,6 @@ ApiOptions:
     modify-volume:
         OutputField: Output
         Required:
-            - volume-id
             - volume-id
         Args:
             - account-id
@@ -5429,7 +5030,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - volume-id
-            - volume-id
         Args:
             - account-id
             - auto-enable-io
@@ -5442,7 +5042,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - vpc-id
-            - vpc-id
         Args:
             - account-id
             - cli-input-json
@@ -5454,7 +5053,6 @@ ApiOptions:
     modify-vpc-endpoint:
         OutputField: Output
         Required:
-            - vpc-endpoint-id
             - vpc-endpoint-id
         Args:
             - account-id
@@ -5477,7 +5075,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - connection-notification-id
-            - connection-notification-id
         Args:
             - account-id
             - cli-input-json
@@ -5489,7 +5086,6 @@ ApiOptions:
     modify-vpc-endpoint-service-configuration:
         OutputField: Output
         Required:
-            - service-id
             - service-id
         Args:
             - acceptance-required
@@ -5510,7 +5106,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - service-id
-            - service-id
         Args:
             - account-id
             - add-allowed-principals
@@ -5527,8 +5122,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - instance-tenancy
-            - instance-tenancy
-            - vpc-id
             - vpc-id
         Args:
             - account-id
@@ -5539,7 +5132,6 @@ ApiOptions:
     modify-vpn-connection:
         OutputField: Output
         Required:
-            - vpn-connection-id
             - vpn-connection-id
         Args:
             - account-id
@@ -5558,8 +5150,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - vpn-connection-id
-            - vpn-connection-id
-            - vpn-tunnel-outside-ip-address
             - vpn-tunnel-outside-ip-address
         Args:
             - account-id
@@ -5575,7 +5165,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - instance-ids
-            - instance-ids
         Args:
             - account-id
             - cli-input-json
@@ -5586,7 +5175,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - public-ip
-            - public-ip
         Args:
             - account-id
             - cli-input-json
@@ -5596,7 +5184,6 @@ ApiOptions:
     provision-byoip-cidr:
         OutputField: Output
         Required:
-            - cidr
             - cidr
         Args:
             - cidr-authorization-context
@@ -5614,8 +5201,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - host-id-set
-            - host-id-set
-            - offering-id
             - offering-id
         Args:
             - cli-input-json
@@ -5628,8 +5213,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - instance-count
-            - instance-count
-            - reserved-instances-offering-id
             - reserved-instances-offering-id
         Args:
             - cli-input-json
@@ -5642,7 +5225,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - purchase-requests
-            - purchase-requests
         Args:
             - cli-input-json
             - client-token
@@ -5652,7 +5234,6 @@ ApiOptions:
     reboot-instances:
         OutputField: Output
         Required:
-            - instance-ids
             - instance-ids
         Args:
             - account-id
@@ -5664,7 +5245,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - nat-gateway-ids
-            - nat-gateway-ids
         Args:
             - account-id
             - cli-input-json
@@ -5674,7 +5254,6 @@ ApiOptions:
     register-image:
         OutputField: Output
         Required:
-            - name
             - name
         Args:
             - account-id
@@ -5752,7 +5331,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - transit-gateway-attachment-id
-            - transit-gateway-attachment-id
         Args:
             - account-id
             - cli-input-json
@@ -5762,7 +5340,6 @@ ApiOptions:
     reject-transit-gateway-vpc-attachment:
         OutputField: Output
         Required:
-            - transit-gateway-attachment-id
             - transit-gateway-attachment-id
         Args:
             - account-id
@@ -5774,8 +5351,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - service-id
-            - service-id
-            - vpc-endpoint-ids
             - vpc-endpoint-ids
         Args:
             - account-id
@@ -5786,7 +5361,6 @@ ApiOptions:
     reject-vpc-peering-connection:
         OutputField: Output
         Required:
-            - vpc-peering-connection-id
             - vpc-peering-connection-id
         Args:
             - account-id
@@ -5810,7 +5384,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - host-ids
-            - host-ids
         Args:
             - account-id
             - cli-input-json
@@ -5831,8 +5404,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - association-id
-            - association-id
-            - iam-instance-profile
             - iam-instance-profile
         Args:
             - account-id
@@ -5841,7 +5412,6 @@ ApiOptions:
     replace-nat-gateways:
         OutputField: Output
         Required:
-            - nat-gateway-ids
             - nat-gateway-ids
         Args:
             - account-id
@@ -5853,8 +5423,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - association-id
-            - association-id
-            - network-acl-id
             - network-acl-id
         Args:
             - account-id
@@ -5866,16 +5434,10 @@ ApiOptions:
         OutputField: Output
         Required:
             - egress
-            - egress
-            - ingress
             - ingress
             - network-acl-id
-            - network-acl-id
-            - protocol
             - protocol
             - rule-action
-            - rule-action
-            - rule-number
             - rule-number
         Args:
             - account-id
@@ -5890,7 +5452,6 @@ ApiOptions:
     replace-route:
         OutputField: Output
         Required:
-            - route-table-id
             - route-table-id
         Args:
             - account-id
@@ -5917,8 +5478,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - association-id
-            - association-id
-            - route-table-id
             - route-table-id
         Args:
             - account-id
@@ -5930,8 +5489,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - destination-cidr-block
-            - destination-cidr-block
-            - transit-gateway-route-table-id
             - transit-gateway-route-table-id
         Args:
             - account-id
@@ -5946,10 +5503,7 @@ ApiOptions:
         OutputField: Output
         Required:
             - instances
-            - instances
             - reason-codes
-            - reason-codes
-            - status
             - status
         Args:
             - account-id
@@ -5969,7 +5523,6 @@ ApiOptions:
     request-spot-fleet:
         OutputField: Output
         Required:
-            - spot-fleet-request-config
             - spot-fleet-request-config
         Args:
             - account-id
@@ -6002,8 +5555,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - allocation-id
-            - allocation-id
-            - attribute
             - attribute
         Args:
             - cli-input-json
@@ -6023,7 +5574,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - fpga-image-id
-            - fpga-image-id
         Args:
             - account-id
             - attribute
@@ -6035,8 +5585,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - attribute
-            - attribute
-            - image-id
             - image-id
         Args:
             - account-id
@@ -6048,8 +5596,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - attribute
-            - attribute
-            - instance-id
             - instance-id
         Args:
             - account-id
@@ -6060,7 +5606,6 @@ ApiOptions:
     reset-network-interface-attribute:
         OutputField: Output
         Required:
-            - network-interface-id
             - network-interface-id
         Args:
             - account-id
@@ -6073,8 +5618,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - attribute
-            - attribute
-            - snapshot-id
             - snapshot-id
         Args:
             - account-id
@@ -6086,7 +5629,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - public-ip
-            - public-ip
         Args:
             - account-id
             - cli-input-json
@@ -6097,10 +5639,7 @@ ApiOptions:
         OutputField: Output
         Required:
             - current-version
-            - current-version
             - prefix-list-id
-            - prefix-list-id
-            - previous-version
             - previous-version
         Args:
             - account-id
@@ -6112,8 +5651,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - client-vpn-endpoint-id
-            - client-vpn-endpoint-id
-            - target-network-cidr
             - target-network-cidr
         Args:
             - access-group-id
@@ -6127,7 +5664,6 @@ ApiOptions:
     revoke-security-group-egress:
         OutputField: Output
         Required:
-            - group-id
             - group-id
         Args:
             - account-id
@@ -6214,8 +5750,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - launch-specification
-            - launch-specification
-            - scheduled-instance-id
             - scheduled-instance-id
         Args:
             - account-id
@@ -6229,8 +5763,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - filters
-            - filters
-            - local-gateway-route-table-id
             - local-gateway-route-table-id
         Args:
             - cli-input-json
@@ -6255,8 +5787,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - filters
-            - filters
-            - transit-gateway-route-table-id
             - transit-gateway-route-table-id
         Args:
             - cli-input-json
@@ -6267,7 +5797,6 @@ ApiOptions:
     send-diagnostic-interrupt:
         OutputField: Output
         Required:
-            - instance-id
             - instance-id
         Args:
             - account-id
@@ -6453,7 +5982,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - instance-ids
-            - instance-ids
         Args:
             - account-id
             - additional-info
@@ -6464,7 +5992,6 @@ ApiOptions:
     start-network-insights-analysis:
         OutputField: Output
         Required:
-            - network-insights-path-id
             - network-insights-path-id
         Args:
             - cli-input-json
@@ -6478,7 +6005,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - service-id
-            - service-id
         Args:
             - account-id
             - cli-input-json
@@ -6488,7 +6014,6 @@ ApiOptions:
     stop-instances:
         OutputField: Output
         Required:
-            - instance-ids
             - instance-ids
         Args:
             - account-id
@@ -6504,7 +6029,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - client-vpn-endpoint-id
-            - client-vpn-endpoint-id
         Args:
             - account-id
             - cli-input-json
@@ -6517,7 +6041,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - instance-ids
-            - instance-ids
         Args:
             - account-id
             - cli-input-json
@@ -6527,7 +6050,6 @@ ApiOptions:
     unassign-ipv6-addresses:
         OutputField: Output
         Required:
-            - network-interface-id
             - network-interface-id
         Args:
             - account-id
@@ -6539,7 +6061,6 @@ ApiOptions:
         OutputField: Output
         Required:
             - network-interface-id
-            - network-interface-id
         Args:
             - account-id
             - cli-input-json
@@ -6549,7 +6070,6 @@ ApiOptions:
     unmonitor-instances:
         OutputField: Output
         Required:
-            - instance-ids
             - instance-ids
         Args:
             - account-id
@@ -6601,7 +6121,6 @@ ApiOptions:
     withdraw-byoip-cidr:
         OutputField: Output
         Required:
-            - cidr
             - cidr
         Args:
             - account-id
